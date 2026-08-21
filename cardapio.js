@@ -37,10 +37,11 @@ $(document).ready(function() {
     
 
 
-
-
-
-
+    ScrollReveal().reveal('#banner', {
+        origin: 'right',
+        duration: 2000,
+        distance: '20%'
+    });
 
     ScrollReveal().reveal('#cta', {
         origin: 'left',
@@ -65,4 +66,42 @@ $(document).ready(function() {
         duration: 1000,
         distance: '20%'
     })
+});
+
+
+let buttons = document.querySelectorAll('.wave-button');
+
+buttons.forEach((button) => {
+    let isAnimating = false;
+    let isOver = false;
+  
+    button.addEventListener('mouseover', function() {    
+      if (isAnimating || isOver) {
+        return;
+      }
+      
+      isOver = true;
+      isAnimating = true;
+      const spans = this.querySelectorAll('span:not(.arrow)');
+
+      spans.forEach((span, index) => {
+          span.style.animation = '';
+          void span.offsetWidth;
+        
+          span.style.animation = `waveEffect 0.5s forwards`;
+        
+        const duration = index * 0.015;
+        span.style.animationDelay = `${duration}s`;
+      });
+
+      const totalDuration = spans.length * 15 + 500;
+      setTimeout(() => {
+          spans.forEach(span => span.style.animation = '');
+          isAnimating = false;
+      }, totalDuration);
+  });
+  
+  button.addEventListener('mouseleave', function() {
+        isOver = false;
+    });
 });

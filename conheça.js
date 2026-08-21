@@ -1,4 +1,5 @@
 
+
 let options = document.querySelectorAll(".options div");
 let cup = document.querySelector(".cup");
 let title = document.querySelector(".title");

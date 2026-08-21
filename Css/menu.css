@@ -1,17 +1,15 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
 #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+#menu2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +46,7 @@
     
 }
 .dish img{
-    width: 40%;
+    width: 60%;
     height:auto;
 }
 
