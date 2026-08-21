@@ -82,6 +82,10 @@ section {
     color: var(--color-primary-6);
     font-size: 1.563rem;
 }
+.section h1{
+    z-index:3
+
+}
 
 .section-subtitle {
     font-size: 2.1875rem;
