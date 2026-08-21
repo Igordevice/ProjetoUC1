@@ -33,6 +33,14 @@ $(document).ready(function() {
         navItems.removeClass('active');
         $(navItems[activeSectionIndex]).addClass('active');
     });
+    
+    
+
+
+
+
+
+
 
     ScrollReveal().reveal('#cta', {
         origin: 'left',
