@@ -49,13 +49,27 @@
 #phone_button button {
     box-shadow: none;
 }
+#bannerlat{
+    position: absolute;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 3;
+    left:0;
+    top: 0;
+}
+#bannerlat img{
+    width:100%;
+    height:auto;
 
+}
 #banner {
     display: flex;
     align-items: start;
     justify-content: end;
     width: 70%;
-    z-index: 2;
+    z-index: 4;
 }
 
 #banner img {
