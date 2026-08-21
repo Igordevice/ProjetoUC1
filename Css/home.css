@@ -27,8 +27,16 @@
 #cta .description {
     font-size: 1.2rem;
 }
+.btn-default:hover{
+    transform: scale(1.1);
 
+}
+.fa-solid:hover{
+     transform: scale(1.1);
+
+}
 #cta_buttons {
+
     display: flex;
     gap: 24px;
 }
