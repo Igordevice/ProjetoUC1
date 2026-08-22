@@ -1,11 +1,12 @@
 #basesol {
-    margin:0;
+  
+    margin:0px;
     padding:0;
 }
 #basesol p{ 
     color: rgb(0, 0, 0);
-  background: white;
-  border: 8px solid white;
+    background: white;
+    border: 8px solid white;
     border-radius: 5px;
 }
 #basesol {
@@ -14,7 +15,7 @@
     margin-right: -8vw;
     background: linear-gradient(#7a6248, #463626);
     width: 80px;
-    height: 150px;
+    height: 130px;
     display: flex;
     z-index: 10 ;
     align-items: flex-start;
@@ -39,7 +40,7 @@
 
 #basesol .feedback {
   margin: 0 20px;
-  padding: 0;
+  padding: 2px;
   background-color: #7a6248;
   box-shadow: none;
   opacity: 0;
@@ -48,9 +49,6 @@
 
 #basesol:hover .feedback {
   opacity: 1;
-}
-body {
- 
 }
 
 .arrow {
@@ -492,18 +490,3 @@ html {
     }
 }
 
-
-body {
-   
-    .twitter {
-        position: fixed;
-        display: block;
-        right: 12px;
-        bottom: 12px;
-        svg {
-            width: 32px;
-            height: 32px;
-            fill: #1da1f2;
-        }
-    }
-}
