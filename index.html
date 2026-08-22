@@ -58,80 +58,121 @@
     </div>
   </section>
 
-  <section class="cardapio" id="cardapio">
-    <div class="chamada">
-      <h2>CARDÁPIO</h2>
-      <p>Bebidas geladas, cafés clássicos, sobremesas e lanches preparados para acompanhar qualquer momento do dia.</p>
-      <a class="botao botao-cardapio" href="cardapio.html" target="_blank">Cardápio completo</a>
-    </div>
-
-    <div class="carrossel-produtos" id="produtos" aria-label="Produtos do cardápio">
-      <button class="controle controle-anterior" type="button" aria-label="Produto anterior">&#8249;</button>
-
-      <div class="janela-carrossel" tabindex="0">
-        <div class="lista-produtos">
-          <article class="produto">
-            <img src="./Img/Frapuccino.png" alt="Matcha latte">
-            <h3>Matcha Latte</h3>
-            <div class="etiquetas">
-              <span>gelado</span>
-              <span>vegetal</span>
-            </div>
-            <p>Matcha batido com leite cremoso, gelo e finalização suave de baunilha.</p>
-            <span class="circulo"></span>
-          </article>
-
-          <article class="produto">
-            <img src="./Img/Strawberry.png" alt="Sanduíche artesanal">
-            <h3>Sanduíche da Casa</h3>
-            <div class="etiquetas">
-              <span>quente</span>
-              <span>artesanal</span>
-            </div>
-            <p>Pão tostado, queijo derretido, folhas frescas e recheio temperado na hora.</p>
-            <span class="circulo"></span>
-          </article>
-
-          <article class="produto">
-            <img src="./Img/Matcha.png" alt="Bebida cremosa de morango">
-            <h3>Morango Cream</h3>
-            <div class="etiquetas">
-              <span>frutado</span>
-              <span>gelado</span>
-            </div>
-            <p>Leite gelado com calda de morango, espuma leve e pedaços da fruta.</p>
-            <span class="circulo"></span>
-          </article>
-
-          <article class="produto">
-            <img src="./Img/Matcha.png" alt="Fatia de bolo banoffee">
-            <h3>Banoffee Slice</h3>
-            <div class="etiquetas">
-              <span>doce</span>
-              <span>cremoso</span>
-            </div>
-            <p>Camadas de banana, doce de leite, creme fresco e base crocante.</p>
-            <span class="circulo"></span>
-          </article>
-        </div>
+  <!-- ========== CARDÁPIO ========== -->
+<section class="cardapio" id="cardapio">
+  <!-- Header da Seção -->
+  <div class="cardapio__header">
+    <h2 class="section-title">CARDÁPIO</h2>
+    <p class="cardapio__description">
+      Bebidas geladas, cafés clássicos, sobremesas e lanches preparados com 
+      ingredientes premium para acompanhar qualquer momento do seu dia.
+    </p>
+    <a href="cardapio.html" class="btn">Cardápio completo →</a>
+  </div>
+ 
+  <!-- Carrossel de Produtos -->
+  <div class="produtos-carousel" id="produtos">
+    <!-- Botão Anterior -->
+    <button class="carousel__btn carousel__btn--prev" aria-label="Produto anterior">❮</button>
+ 
+    <!-- Container do Carrossel -->
+    <div class="carousel__container">
+      <div class="carousel__track">
+        
+        <!-- Produto 1 -->
+        <article class="produto">
+          <img src="./img/matcha.png" alt="Matcha Latte" class="produto__img">
+          <h3 class="produto__title">Matcha Latte</h3>
+          <div class="produto__tags">
+            <span class="tag">gelado</span>
+            <span class="tag">vegetal</span>
+          </div>
+          <p class="produto__descricao">Matcha batido com leite cremoso, gelo e finalização suave de baunilha.</p>
+          <span class="produto__circle"></span>
+        </article>
+ 
+        <!-- Produto 2 -->
+        <article class="produto">
+          <img src="./img/sanduiche.png" alt="Sanduíche" class="produto__img">
+          <h3 class="produto__title">Sanduíche da Casa</h3>
+          <div class="produto__tags">
+            <span class="tag">quente</span>
+            <span class="tag">artesanal</span>
+          </div>
+          <p class="produto__descricao">Pão tostado, queijo derretido, folhas frescas e recheio temperado na hora.</p>
+          <span class="produto__circle"></span>
+        </article>
+ 
+        <!-- Produto 3 -->
+        <article class="produto">
+          <img src="./img/morango.png" alt="Morango Cream" class="produto__img">
+          <h3 class="produto__title">Morango Cream</h3>
+          <div class="produto__tags">
+            <span class="tag">frutado</span>
+            <span class="tag">gelado</span>
+          </div>
+          <p class="produto__descricao">Leite gelado com calda de morango, espuma leve e pedaços da fruta.</p>
+          <span class="produto__circle"></span>
+        </article>
+ 
+        <!-- Produto 4 -->
+        <article class="produto">
+          <img src="./img/bolo.png" alt="Banoffee Slice" class="produto__img">
+          <h3 class="produto__title">Banoffee Slice</h3>
+          <div class="produto__tags">
+            <span class="tag">doce</span>
+            <span class="tag">cremoso</span>
+          </div>
+          <p class="produto__descricao">Camadas de banana, doce de leite, creme fresco e base crocante.</p>
+          <span class="produto__circle"></span>
+        </article>
+ 
+        <!-- Produto 5 -->
+        <article class="produto">
+          <img src="./img/cappuccino.png" alt="Cappuccino Italiano" class="produto__img">
+          <h3 class="produto__title">Cappuccino Italiano</h3>
+          <div class="produto__tags">
+            <span class="tag">quente</span>
+            <span class="tag">clássico</span>
+          </div>
+          <p class="produto__descricao">Espresso duplo com leite vaporizado e cobertura de cacau premium.</p>
+          <span class="produto__circle"></span>
+        </article>
+ 
+        <!-- Produto 6 -->
+        <article class="produto">
+          <img src="./img/iced-coffee.png" alt="Iced Coffee" class="produto__img">
+          <h3 class="produto__title">Iced Coffee</h3>
+          <div class="produto__tags">
+            <span class="tag">gelado</span>
+            <span class="tag">refrescante</span>
+          </div>
+          <p class="produto__descricao">Café fresco com gelo, leite condensado e um toque de baunilha.</p>
+          <span class="produto__circle"></span>
+        </article>
+ 
+        <!-- Produto 7 -->
+        <article class="produto">
+          <img src="./img/brownie.png" alt="Brownie Quente" class="produto__img">
+          <h3 class="produto__title">Brownie Quente</h3>
+          <div class="produto__tags">
+            <span class="tag">doce</span>
+            <span class="tag">chocolate</span>
+          </div>
+          <p class="produto__descricao">Brownie artesanal servido quente com sorvete de baunilha.</p>
+          <span class="produto__circle"></span>
+        </article>
+ 
       </div>
-
-      <button class="controle controle-proximo" type="button" aria-label="Próximo produto">&#8250;</button>
-
-      <div class="indicadores" aria-label="Navegação do carrossel">
-        <button class="ativo" type="button" aria-label="Ir para produto 1"></button>
-        <button type="button" aria-label="Ir para produto 2"></button>
-        <button type="button" aria-label="Ir para produto 3"></button>
-        <button type="button" aria-label="Ir para produto 4"></button>
-      </div>
     </div>
-  </section>
-
-  <a href="cardapio.html" target="_blank">
-    <button class="button">Clique aqui e confira<span>&#10230;</span></button>
-  </a>
-  <br>
-
+ 
+    <!-- Botão Próximo -->
+    <button class="carousel__btn carousel__btn--next" aria-label="Próximo produto">❯</button>
+ 
+    <!-- Indicadores de Página -->
+    <div class="carousel__dots"></div>
+  </div>
+</section>
   <h1>Nossos endereços</h1>
 
   <div class="carousel-wrapper">
