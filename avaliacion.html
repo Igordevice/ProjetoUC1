@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações</title>
+    <link rel="stylesheet" href="Css/avaliacion.css" type="text/css">
+
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <button id="ButtonNav">
+                <a href="index.html"><span>&larr;</span> voltar </a>
+            </button>
+
+            <i id="nav_logo"> Incoffee </i>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="conheça.html">Conheça seu café</a>
+                </li>
+            </ul>
+
+            
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+  <div id="formulario">
+    <form action="#" method="get">
+        <label for="titulo">Escolha um titulo:</label><br><br>
+        <input type="titulo" id="titulo" name="titulo"><br><br>
+
+        <div class="linha-testemunho">
+            <label for="testemunho">Escreva o seu testemunho:</label>
+            <div class="comentarios-panel">
+                <button class="comentario-aba" type="button" popovertarget="comentariosPopout">Comentar</button>
+            </div>
+        </div>
+
+        <textarea id="testemunho" name="testemunho"> </textarea><br><br>
+
+        <label for="comentarios">Comentários na publicação:</label><br><br>
+        <input type="radio" id="ativado" name="comentarios" value="ativado">
+        <label id="ativado"> Ativado </label>
+        <input type="radio" id="desativado" name="comentarios" value="desativado">
+        <label id="desativado"> Desativado </label> <br></br>
+        <input type="submit" value="Publicar" id="enviar" class="btn">
+    </form>
+
+    <div id="comentariosPopout" popover>
+        <div class="comentarios-header">
+            <h2>Comentários</h2>
+            <button type="button" class="fechar-comentarios" popovertarget="comentariosPopout" popovertargetaction="hide">×</button>
+        </div>
+
+        <div class="lista-comentarios">
+            <div class="comentario-item">
+                <strong>Maria L.</strong>
+                <p>“O café é muito bem preparado e o ambiente é super agradável.Cabendo na minha alimentação,pois sou intolerante a lasctose.”</p>
+            </div>
+
+            <div class="comentario-item">
+                <strong>João P.</strong>
+                <p>“Adorei a variedade do cardápio e a atenção do atendimento. Ainda mais para minha filha autista, pois eles possuem um espaço de acolhimento.”</p>
+            </div>
+
+            <div class="comentario-item">
+                <strong>Fernanda R.</strong>
+                <p>“O local é ótimo para uma pausa rápida e também para conversar.”</p>
+            </div>
+
+            <div class="comentario-item">
+                <strong>Lucas T.</strong>
+                <p>“A qualidade do café e a decoração fazem valer a visita.”</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
