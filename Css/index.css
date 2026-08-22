@@ -1013,6 +1013,8 @@ body > h1 {
 }
 
 @media (max-width: 480px) {
+  
+}
   .hero__text-line {
     font-size: clamp(40px, 12vw, 100px);
     letter-spacing: -0.5px;
