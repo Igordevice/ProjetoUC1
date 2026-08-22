@@ -243,3 +243,4 @@ if (enderecoTrack && enderecoPrevBtn && enderecoNextBtn && enderecoDots) {
 }
 
 // ============BARRA DE PESQUISA ============
+
