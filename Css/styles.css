@@ -18,7 +18,7 @@
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,6 +49,9 @@ section {
     cursor: pointer;
     transition: background-color .3s ease;
 }
+
+
+
 
 .btn-default:hover {
     background-color: var(--color-primary-3);
@@ -95,7 +98,6 @@ section {
 
 .wave-button:hover span:not(.arrow) {
     color: white;
-    /*animation: waveEffect 0.6s forwards;*/
 }
 
 .wave-button:hover {
@@ -108,11 +110,14 @@ section {
 
 .button{
   display: flex;
-  justify-content: center; /* Centraliza na horizontal */
-  align-items: center;     /* Centraliza na vertical */
+  justify-content: center; 
+  align-items: center;     
 
 
 }
+
+
+
 .wave-button {
     width: 20%;
     font-family: "Gill Sans", sans-serif;
@@ -154,3 +159,5 @@ section {
       
     }
 }
+
+

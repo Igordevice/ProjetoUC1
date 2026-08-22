@@ -26,6 +26,7 @@
     background: var(--cream);
     color: var(--ink);
     position:relative;
+    font-family: Verdana, Geneva, Tahoma;
   }
 
   body::before{
@@ -106,7 +107,7 @@
     display:flex;
     align-items:center;
     gap: 10px;
-    font-family: Verdana, Geneva, Tahoma;
+  
     font-size: 0.72rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -118,7 +119,7 @@
     content:"";
     width: 26px; height:1px;
     background: var(--terracotta);
-    font-family: Verdana, Geneva, Tahoma;
+
   }
 
   .hero h1{
@@ -127,7 +128,7 @@
     line-height: 1.08;
     margin: 0 0 22px;
     color: var(--espresso-900);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
   }
   .hero h1 em{
     font-weight: 500;
@@ -162,6 +163,7 @@
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--ink);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration:none;
     border-bottom: 1px solid var(--ink);
     padding-bottom: 2px;
@@ -255,6 +257,8 @@
   .label-tag{ position:absolute; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color: rgba(255,255,255,0.75); left:0; right:0; text-align:center; transition: opacity 0.3s ease; }
 
   .drink-sub{ margin-top: 4px; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,241,232,0.55); }
+
+
 
   /* ---------- SECTION SHARED ---------- */
   section{ position:relative; z-index:5; max-width: 1320px; margin: 0 auto; padding: 90px 5vw; }

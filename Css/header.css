@@ -15,10 +15,37 @@ header {
     height: 40px;
     z-index: 2;
 
+
 }
+
+#ButtonNav 
+{
+    height: 50px;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+#ButtonNav a
+{
+
+    text-decoration: none;
+    color: #7a6248;
+
+}
+
+#ButtonNav :hover
+{
+  transition: transform 0.3s ease;
+    
+}
+
 
 #nav_logo {
     font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--color-primary-6);
 }
 

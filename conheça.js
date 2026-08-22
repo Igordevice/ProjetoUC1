@@ -27,13 +27,13 @@ const drinks = [
   { name:"Cappuccino",  sub:"espresso · leite · espuma",  water:0,  milk:55, espresso:35, crema:false },
   { name:"Latte",       sub:"espresso · bastante leite",  water:0,  milk:70, espresso:28, crema:false },
   { name:"Flat White",  sub:"dose dupla · leite cremoso", water:0,  milk:50, espresso:45, crema:false },
-  { name:"Black",       sub:"café coado, sem leite",      water:70, milk:0,  espresso:0,  crema:false },
-  { name:"Café Au Lait",sub:"café coado · leite quente",  water:35, milk:40, espresso:0,  crema:false },
+  { name:"Black",       sub:"café coado, sem leite",      water:0, milk:0,  espresso:70,  crema:false },
+  { name:"Café ao leite",sub:"café coado · leite quente", water:0, milk:80, espresso:20,  crema:false },
   { name:"Irish",       sub:"café · whisky · creme",      water:45, milk:15, espresso:20, crema:false },
   { name:"Con Panna",   sub:"espresso · chantilly",       water:0,  milk:0,  espresso:40, crema:true },
   { name:"Affogato",    sub:"espresso sobre sorvete",     water:0,  milk:20, espresso:35, crema:true },
   { name:"Mocha",       sub:"espresso · chocolate · leite",water:0, milk:45, espresso:35, crema:false },
-  { name:"Americano",   sub:"espresso · água quente",     water:55, milk:0,  espresso:20, crema:true },
+  { name:"Americano",   sub:"espresso",     water:0, milk:0,  espresso:20, crema:true },
 ];
 
 const ring = document.getElementById('ring');

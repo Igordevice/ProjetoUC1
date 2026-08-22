@@ -36,6 +36,13 @@
 #cta .description {
     font-size: 1.2rem;
 }
+
+
+.btn-default{
+    color: #ffffff;
+
+}
+
 .btn-default:hover{
     transform: scale(1.1);
 

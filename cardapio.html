@@ -19,7 +19,11 @@
 <body>
     <header>
         <nav id="navbar">
-            <i id="nav_logo"> Incoffee</i>
+            <button id="ButtonNav">
+                <a href="index.html"><span>&larr;</span> Voltar </a>
+            </button>
+
+            <i id="nav_logo"> Incoffee </i>
 
             <ul id="nav_list">
                 <li class="nav-item active">
@@ -69,7 +73,7 @@
             <div class="shape"></div>
             <div id="cta">
                 <h1 class="title">
-                    Onde o café vira 
+                    Onde o café vira
                     <span>experiência</span>
                 </h1>
 
@@ -118,27 +122,29 @@
         <!--    ==================== Botão para o conheçã seu café  ====================-->
 
         <div class="button">
-        <a href="conheça.html"></a>
-        <button class="wave-button">
-            
-            <span>C</span>
-            <span>O</span>
-            <span>N</span>
-            <span>H</span>
-            <span>E</span>
-            <span>Ç</span>
-            <span>A</span>
-            <span><Ul></Ul></span>
-            <span>S<S></S></span>
-            <span>E</span>
-            <span>U</span>
-            <span></span>
-            <span>C</span>
-            <span>A</span>
-            <span>F</span>
-            <span>É</span>
-            <span class="arrow"> →</span>
-        </button>
+            <a href="conheça.html"></a>
+            <button class="wave-button">
+
+                <span>C</span>
+                <span>O</span>
+                <span>N</span>
+                <span>H</span>
+                <span>E</span>
+                <span>Ç</span>
+                <span>A</span>
+                <span>
+                    <Ul></Ul>
+                </span>
+                <span>S<S></S></span>
+                <span>E</span>
+                <span>U</span>
+                <span></span>
+                <span>C</span>
+                <span>A</span>
+                <span>F</span>
+                <span>É</span>
+                <span class="arrow"> →</span>
+            </button>
         </div>
 
 
@@ -152,22 +158,38 @@
             <h2 class="section-title">Cardápio</h2>
             <h3 class="section-subtitle">Nossos pratos especiais</h3>
 
-            <div id="dishes">
+        <!--    ==================== Barra de pesquisa ====================-->
+
+        <section id="barradepesquisa">
+                <div id="pesquisaconteiner">
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input type="text" class="input-field" placeholder="Pesquisar...">
+                    </div>
+                </div>
+        </section>
+
+
+         <!--    ==================== Barra de pesquisa ====================-->
+
+            
+         
+         <div id="dishes">
                 <div class="dish">
                     <div class="dish-heart">
                         <i class="fa-solid fa-heart"></i>
                     </div>
-
-                    <img src="src/images/dish.png" class="dish-image" alt="">
 
 
                     <!--    ==================== CARD 01====================-->
 
 
                     <h3 class="dish-title">
-                        Milkshake de Morango
+                        Milkshake de bluberry
                     </h3>
-                    <img src="Img/Strawberry.png" alt="milkshakeMorango">
+                    <img src="Img/Bluberry.png" alt="milkshakeMorango">
 
                     <span class="dish-description">
                         Cremoso, geladinho e feito com morangos selecionados. Zero lactose e sem adição de açúcares!
@@ -194,8 +216,6 @@
                     <div class="dish-heart">
                         <i class="fa-solid fa-heart"></i>
                     </div>
-
-                    <img src="src/images/dish2.png" class="dish-image" alt="">
 
                     <h3 class="dish-title">
                         Torta de limão
@@ -228,10 +248,8 @@
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <img src="src/images/dish3.png" class="dish-image" alt="">
-
                     <h3 class="dish-title">
-                        Fapucino Cremoso
+                        Frapuccino
                     </h3>
                     <img src="Img\Frapuccino.png" alt="frapuccino">
                     <span class="dish-description">
@@ -272,7 +290,6 @@
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <img src="src/images/dish.png" class="dish-image" alt="">
 
 
                     <!--    ==================== CARD 01====================-->
@@ -309,7 +326,6 @@
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <img src="src/images/dish2.png" class="dish-image" alt="">
 
                     <h3 class="dish-title">
                         Suco de kiwi
@@ -317,7 +333,7 @@
                     <img src="Img/kiwijuice.png" alt="Suco de kiwi">
 
                     <span class="dish-description">
-                        O equilíbrio perfeito entre o acidez do limão e o chantilly leve sobre uma base crocante.
+                        Um suco de kiwi refrescante e saboroso, com o equilíbrio perfeito entre o toque cítrico e a doçura natural da fruta. Uma opção leve e deliciosa para refrescar o seu dia.
                     </span>
 
                     <div class="dish-rate">
@@ -342,14 +358,12 @@
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <img src="src/images/dish3.png" class="dish-image" alt="">
-
                     <h3 class="dish-title">
-                        Fapucino Cremoso
+                        Café sem gluten
                     </h3>
-                    <img src="Img\Frapuccino.png" alt="frapuccino">
+                    <img src="Img/SemGluten.png" alt="frapuccino">
                     <span class="dish-description">
-                        Café gelado encorpado com toque de leite sem lactose e adoçado na medida certa, sem açúcar.
+                        Um café leve e saboroso, preparado com ingredientes cuidadosamente selecionados e sem glúten. Perfeito para acompanhar aquele momento de pausa.
                     </span>
 
                     <div class="dish-rate">
@@ -381,7 +395,6 @@
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <img src="src/images/dish.png" class="dish-image" alt="">
 
 
                     <!--    ==================== CARD 01====================-->
@@ -418,7 +431,6 @@
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <img src="src/images/dish2.png" class="dish-image" alt="">
 
                     <h3 class="dish-title">
                         Torta de limão
@@ -451,7 +463,6 @@
                         <i class="fa-solid fa-heart"></i>
                     </div>
 
-                    <img src="src/images/dish3.png" class="dish-image" alt="">
 
                     <h3 class="dish-title">
                         Frapuccino Cremoso

@@ -241,3 +241,5 @@ if (enderecoTrack && enderecoPrevBtn && enderecoNextBtn && enderecoDots) {
   buildDots();
   updateEnderecoCarousel();
 }
+
+// ============BARRA DE PESQUISA ============

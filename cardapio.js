@@ -55,6 +55,12 @@ $(document).ready(function() {
         distance: '20%'
     });
 
+        ScrollReveal().reveal('#ButtonNav', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
+
     ScrollReveal().reveal('#testimonial_chef', {
         origin: 'left',
         duration: 1000,
@@ -103,5 +109,55 @@ buttons.forEach((button) => {
   
   button.addEventListener('mouseleave', function() {
         isOver = false;
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const campoPesquisa = document.querySelector(".input-field");
+    const produtos = document.querySelectorAll(".dish");
+    const container = document.querySelector("#dishes");
+
+    if (!campoPesquisa || !container) return;
+
+   
+    const mensagem = document.createElement("div");
+    mensagem.classList.add("mensagem-nenhum-produto");
+    mensagem.textContent = "Nenhum produto encontrado.";
+    mensagem.style.display = "none";
+    container.appendChild(mensagem);
+
+    campoPesquisa.addEventListener("input", function () {
+        const pesquisa = campoPesquisa.value
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .trim();
+
+        let encontrouProduto = false;
+
+        produtos.forEach(function (produto) {
+            const tituloElemento = produto.querySelector(".dish-title");
+            if (!tituloElemento) return;
+
+            const nomeProduto = tituloElemento.textContent
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+            if (pesquisa === "" || nomeProduto.includes(pesquisa)) {
+                produto.style.display = ""; 
+                encontrouProduto = true;
+            } else {
+                produto.style.display = "none"; 
+            }
+        });
+
+      
+        if (!encontrouProduto && pesquisa !== "") {
+            mensagem.style.display = "block";
+        } else {
+            mensagem.style.display = "none";
+        }
     });
 });
