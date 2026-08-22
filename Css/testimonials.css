@@ -53,6 +53,36 @@
     color: var(--color-primary-6);
 }
 
+
+.buttonT {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+
+}
+
+.wave-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;       
+    padding: 10px 20px;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 13px;
+    background-color: #7a6248;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.wave-button span {
+    display: inline-block;
+    color: white;
+    transition: color 0.3s;
+}
+
 @media screen and (max-width: 1170px) {
     #testimonials {
         flex-direction: column;
