@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INCOFFE - Coffee Shop</title>
+  <link rel="stylesheet" href="Css/index.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__brand">INCOFFE</div>
+    <ul class="navbar__menu">
+      <li><a href="sobrenos.html" class="navbar__link">Sobre Nós</a></li>
+      <li><a href="#cardapio" class="navbar__link">Cardapio</a></li>
+      <li><a href="#products" class="navbar__link">Produtos</a></li>
+      <li><button class="navbar__cta">Peça agora</button></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="hero">
+    <img src="Img/grans de cafe .png" alt="Coffee Beans" class="hero__background-image">
+
+    <div class="hero__text-background">
+      <h1 class="hero__text-line">INCOFFE</h1>
+      <h1 class="hero__text-line">INCOFFE</h1>
+      <h1 class="hero__text-line">INCOFFE</h1>
+    </div>
+
+    <div class="hero__image-wrapper" id="coffeeImageWrapper">
+      <img src="./Img/cafecentro.png" alt="Iced Amber Latte" class="hero__product-image" id="coffeeImage">
+    </div>
+
+    <div class="hero__side-text">
+      <h2>TEXTO 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="dotted-lines"></div>
+    </div>
+  </section>
+
+  <section class="sobre-nos">
+    <div class="container">
+      <div class="texto-col">
+        <h2 class="titulo">SOBRE NÓS</h2>
+        <p class="subtitulo">Subtítulo opcional</p>
+        <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">Saiba mais</a>
+      </div>
+
+      <div class="video-col">
+        <div class="video-container">
+          <video src="./videos/Vcoffee.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cardapio" id="cardapio">
+    <div class="chamada">
+      <h2>CARDÁPIO</h2>
+      <p>Bebidas geladas, cafés clássicos, sobremesas e lanches preparados para acompanhar qualquer momento do dia.</p>
+      <a class="botao botao-cardapio" href="cardapio.html" target="_blank">Cardápio completo</a>
+    </div>
+
+    <div class="carrossel-produtos" id="produtos" aria-label="Produtos do cardápio">
+      <button class="controle controle-anterior" type="button" aria-label="Produto anterior">&#8249;</button>
+
+      <div class="janela-carrossel" tabindex="0">
+        <div class="lista-produtos">
+          <article class="produto">
+            <img src="./Img/Frapuccino.png" alt="Matcha latte">
+            <h3>Matcha Latte</h3>
+            <div class="etiquetas">
+              <span>gelado</span>
+              <span>vegetal</span>
+            </div>
+            <p>Matcha batido com leite cremoso, gelo e finalização suave de baunilha.</p>
+            <span class="circulo"></span>
+          </article>
+
+          <article class="produto">
+            <img src="./Img/Strawberry.png" alt="Sanduíche artesanal">
+            <h3>Sanduíche da Casa</h3>
+            <div class="etiquetas">
+              <span>quente</span>
+              <span>artesanal</span>
+            </div>
+            <p>Pão tostado, queijo derretido, folhas frescas e recheio temperado na hora.</p>
+            <span class="circulo"></span>
+          </article>
+
+          <article class="produto">
+            <img src="./Img/Matcha.png" alt="Bebida cremosa de morango">
+            <h3>Morango Cream</h3>
+            <div class="etiquetas">
+              <span>frutado</span>
+              <span>gelado</span>
+            </div>
+            <p>Leite gelado com calda de morango, espuma leve e pedaços da fruta.</p>
+            <span class="circulo"></span>
+          </article>
+
+          <article class="produto">
+            <img src="./Img/Matcha.png" alt="Fatia de bolo banoffee">
+            <h3>Banoffee Slice</h3>
+            <div class="etiquetas">
+              <span>doce</span>
+              <span>cremoso</span>
+            </div>
+            <p>Camadas de banana, doce de leite, creme fresco e base crocante.</p>
+            <span class="circulo"></span>
+          </article>
+        </div>
+      </div>
+
+      <button class="controle controle-proximo" type="button" aria-label="Próximo produto">&#8250;</button>
+
+      <div class="indicadores" aria-label="Navegação do carrossel">
+        <button class="ativo" type="button" aria-label="Ir para produto 1"></button>
+        <button type="button" aria-label="Ir para produto 2"></button>
+        <button type="button" aria-label="Ir para produto 3"></button>
+        <button type="button" aria-label="Ir para produto 4"></button>
+      </div>
+    </div>
+  </section>
+
+  <a href="cardapio.html" target="_blank">
+    <button class="button">Clique aqui e confira<span>&#10230;</span></button>
+  </a>
+  <br>
+
+  <h1>Nossos endereços</h1>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior">&#8592;</button>
+
+    <div class="carousel-track-container">
+      <div class="carousel-track" id="track">
+        <div class="cardEndereço">
+          <img src="Img/Endereço1.jpeg" alt="Loja Oscar Freire">
+          <h2>incoffe - Oscar Freire Office</h2>
+          <p>R. Oscar Freire, 2.250 – Piso Café</p>
+          <p>Pinheiros - São Paulo, SP – 05409-011</p>
+          <p class="phone">📞 (11) 3898-4740</p>
+          <p class="hours-title">Horário de funcionamento:</p>
+          <p>Seg a sex: 7h às 19h</p>
+          <p>Sáb e Dom: Fechado</p>
+        </div>
+
+        <div class="cardEndereço">
+          <img src="Img/Endereço2.jpeg" alt="Loja Bela Vista">
+          <h2>Incoffe - Bela Vista</h2>
+          <p>R. Dna Adma Jafet, 74</p>
+          <p>Bela Vista – São Paulo, SP</p>
+          <p class="phone">📞 (11) 2894-2485</p>
+          <p class="hours-title">Horário de funcionamento:</p>
+          <p>Seg à sex: 8h às 20h</p>
+          <p>Sáb: 8h às 16h</p>
+          <p>Dom: Fechado</p>
+        </div>
+
+        <div class="cardEndereço">
+          <img src="Img/Endereço3.jpeg" alt="Loja Vila Olímpia">
+          <h2>Incoffe - Vila Olímpia</h2>
+          <p>R. Dr Cardoso de Melo, 878</p>
+          <p>Vila Olímpia – São Paulo, SP – 04548-003</p>
+          <p class="hours-title">Horário de funcionamento:</p>
+          <p>Seg à sex: 7h às 18h30</p>
+          <p>Sáb e Dom: Fechado</p>
+        </div>
+
+        <div class="cardEndereço">
+          <img src="Img/endereço4.png" alt="Loja Itaim">
+          <h2>Incoffe - Itaim Bibi</h2>
+          <p>R. João Cachoeira, 1200</p>
+          <p>Itaim Bibi – São Paulo, SP</p>
+          <p class="phone">📞 (11) 3345-6789</p>
+          <p class="hours-title">Horário de funcionamento:</p>
+          <p>Seg à sex: 7h às 19h</p>
+          <p>Sáb: 9h às 14h</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-btn next" id="nextBtn" aria-label="Próximo">&#8594;</button>
+
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>INCOFFE</h2>
+        <p>
+          Um café especial para todos os momentos.
+          Sabor, qualidade e aconchego em um só lugar.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links</h3>
+        <a href="index.html">Início</a>
+        <a href="sobrenos.html">Sobre Nós</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="#products">Produtos</a>
+      </div>
+
+      <div class="footer-contato">
+        <h3>Contato</h3>
+        <p>📍 São Paulo - SP</p>
+        <p>📞 (11) 99999-9999</p>
+        <p>✉️ contato@incoffe.com</p>
+      </div>
+
+      <div class="footer-social">
+        <h3>Siga a InCoffe</h3>
+        <div class="social-icons">
+          <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 InCoffe. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
