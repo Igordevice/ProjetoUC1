@@ -1,9 +1,5 @@
 :root {
-<<<<<<< HEAD
-  --color-primary: #ffe8b4;
-=======
   --color-primary: #873214;
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
   --color-accent: #fffefe;
   --color-text: #2c2c2a;
   --color-text-light: #888780;
@@ -27,105 +23,17 @@
   box-sizing: border-box;
 }
 
-
-
-header {
-    width: 100%;
-    height: 90px;
-    padding: 28px 8%;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-}
-
-#navbar {
-
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-  
-
-
-}
-
-
-#nav_logo {
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #7a6248;
-}
-
-#nav_list {
-    display: flex;
-    font-size: 20px;
-    list-style: none;
-    gap: 48px;
-    color: #7a6248;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: #1d1d1dad;
-    font-weight: 600;
-}
-
-.nav-item.active a {
-    color: var(--color-neutral-1);
-    border-bottom: 3px solid var(--color-primary-4);
-}
-
-#mobile_btn {
-    display: none;
-}
-
-#mobile_menu {
-    display: none;
-}
-
-@media screen and (max-width: 1170px) {
-    #nav_list,
-    #navbar .btn-default {
-        display: none;
-    }
-
-    #mobile_btn {
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    #mobile_menu.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #mobile_nav_list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 0px;
-    }
-
-    #mobile_nav_list .nav-item {
-        list-style: none;
-        text-align: center;
-    } 
-}
-
-
-
-
-
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
 .container {
   max-width: 1200px;
@@ -134,8 +42,6 @@ html {
   padding: 0 20px;
 }
 
-<<<<<<< HEAD
-=======
 .navbar {
   position: fixed;
   top: 0;
@@ -150,11 +56,14 @@ html {
   align-items: center;
   border-bottom: 0.5px solid var(--color-border);
 }
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
 
+.navbar__brand {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-accent);
+}
 
-<<<<<<< HEAD
-=======
 .navbar__menu {
   display: flex;
   list-style: none;
@@ -189,7 +98,6 @@ html {
   color: var(--color-accent);
 }
 
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
 .hero {
   height: 100vh;
   min-height: 100vh;
@@ -233,12 +141,8 @@ html {
 .hero__text-line {
   font-size: clamp(60px, 25vw, 300px);
   font-weight: 900;
-<<<<<<< HEAD
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-=======
   font-family: Rockwell Extra Bold", "Rockwell", "Cooper Black";
   text-transform: uppercase;
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
   letter-spacing: -5px;
   line-height: 0.85;
   white-space: nowrap;
@@ -345,11 +249,7 @@ html {
 }
 
 .sobre-nos {
-<<<<<<< HEAD
-
-=======
   background: #dab07e;
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -370,11 +270,7 @@ html {
 .texto-col {
   flex: 0 0 50%;
   max-width: 50%;
-<<<<<<< HEAD
-  background-color: #f0ceb1;
-=======
   background-color: #e4bb97;
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -399,29 +295,13 @@ html {
 }
 
 .descricao {
-<<<<<<< HEAD
-  color: black;
-=======
   color: #8F3616;
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 15px;
   font-family: "Poppins", sans-serif;
 }
 
-<<<<<<< HEAD
-.wave-button:hover span:not(.arrow) {
-    color: white;
-    
-}
-
-.wave-button:hover {
-  padding: 17px 32px;
-  box-shadow: 0px 0px 50px rgba(76, 175, 80, 0.15);
-  background-color: #8F3616;
-  
-=======
 .btn {
   display: inline-block;
   margin-top: 15px;
@@ -440,61 +320,7 @@ html {
 .btn:hover {
   background-color: #3a2a00;
   border-color: #3a2a00;
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
 }
-
-
-.button {
-    display: flex; 
-    justify-content: center;
-    border-color:#8F3616;
-}
-
-.wave-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;        
-    width: auto;
-    padding: 10px 20px;
-    font-family: "Gill Sans", sans-serif;
-    font-size: 20px;
-    background-color: #8F3616;;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.25s;
-    border-color:#8F3616;
-}
-
-.wave-button span {
-    display: inline-block;
-    color: white;
-    transition: color 0.3s;
-   
-}
-
-.arrow {
-    font-size: 1.2em;
-    display: inline-block;
-}
-
-@keyframes waveEffect {
-    0% {
-        opacity: 0;
-        transform: translateY(8em) scale(1);
-    }
-    50% {
-        transform: translateY(-0.5em) scale(1.05);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      
-    }
-}
-
 
 .video-col {
   flex: 0 0 50%;
@@ -538,103 +364,6 @@ html {
   margin-bottom: 30px;
 }
 
-<<<<<<< HEAD
-.buttonC {
-  padding: 1.3em 3em;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-}
-
-.buttonC:hover {
-  background-color: #8F3616;
-  box-shadow: 0px 15px 20px #8F3616(46, 229, 157, 0.4);
-  color: #fff;
-  transform: translateY(-7px);
-}
-
-button:active {
-  transform: translateY(-1px);
-}
-
-.imagem-sobre,
-.imagem-ingredientes {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.cardapio {
-  padding: 82px 0 44px;
-  overflow: hidden;
-  color: #7a6248;
-  
-}
-
-.chamada {
-  
-  max-width: 620px;
-  margin: 0 auto;
-  padding: 0 24px;
-  text-align: center;
-}
-
-.chamada p {
-  margin: 30px 0;
-  font-weight: 600;
-  color: #000;
-}
-
-
-
-.carrossel-produtos {
-  max-width: 1441px;
-  position: relative;
-  margin: 0 auto;
-  padding-bottom: 50px;
-}
-
-.janela-carrossel {
-  overflow-x: auto;
-  overflow-y: visible;
-  scroll-behavior: smooth;
-  scroll-padding: 0 max(54px, 5vw);
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-
-.janela-carrossel::-webkit-scrollbar {
-  display: none;
-}
-
-.lista-produtos {
-  display: flex;
-  gap: 34px;
-  width: max-content;
-  padding: 108px max(54px, 5vw) 8px;
-}
-
-.produto {
-  flex: 0 0 var(--largura-card-produto);
-  height: var(--altura-card-produto);
-  position: relative;
-  scroll-snap-align: center;
-  padding: 272px 34px 34px;
-  border-radius: 0 0 var(--raio-card) var(--raio-card);
-  background: linear-gradient(180deg, rgba(255, 241, 229, 0) 0%, #d35a2a 20%, var(--cor-marrom) 78%);
-  color: var(--cor-texto-claro);
-}
-
-=======
 .botao {
   width: max-content;
   min-width: 100px;
@@ -724,7 +453,6 @@ button:active {
   color: var(--cor-texto-claro);
 }
 
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
 .produto img {
   width: 250px;
   height: 245px;
@@ -746,10 +474,6 @@ button:active {
 }
 
 .produto h3 {
-<<<<<<< HEAD
-  color: rgba(0, 0, 0, 0.808);
-=======
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
   min-height: 62px;
   margin-bottom: 9px;
   font-size: 28px;
@@ -773,10 +497,6 @@ button:active {
 }
 
 .produto p {
-<<<<<<< HEAD
-  color: rgba(0, 0, 0, 0.808);
-=======
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
   max-width: 235px;
   font-size: 18px;
   font-weight: 600;
@@ -975,11 +695,7 @@ h1 {
 .dot.active { background: var(--accent); }
 
 .footer {
-<<<<<<< HEAD
-  background-color: #7a6248;
-=======
   background-color: #6E2F08;
->>>>>>> f43133abcd33883a3effc6cb1319ea5640625083
   color: rgb(255, 248, 248);
   padding: 50px 60px 20px;
   font-family: Arial, Helvetica, sans-serif;

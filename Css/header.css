@@ -18,22 +18,30 @@ header {
 
 }
 
-#ButtonNav 
-{
-    height: 50px;
+#ButtonNav {
+    font-family: Georgia, bold;
+    margin-left: 0;
+    height: 40px;
     border: none;
+    background: #5b4331;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 20px;
-    
+    cursor: pointer;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(59, 36, 24, 0.12);
 }
 
-
-#ButtonNav a
-{
-
+#ButtonNav a {
+    background: transparent;
     text-decoration: none;
-    color: #7a6248;
-
+    color: #fdfcfb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #ButtonNav :hover
