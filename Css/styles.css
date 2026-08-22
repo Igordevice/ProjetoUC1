@@ -113,12 +113,14 @@ section {
   display: flex;
   justify-content: center; 
   align-items: center;     
-
+ text-decoration: none;
 
 }
 
 
-
+.wave-button a {
+    text-decoration: none;
+    }
 .wave-button {
     width: 20%;
     font-family: "Gill Sans", sans-serif;
@@ -130,14 +132,20 @@ section {
     cursor: pointer;
     overflow: hidden;
     transition: 0.25s;
-  
+    text-decoration: none;
+}
 
-
+.wave-button:hover,
+.wave-button:visited,
+.wave-button:active,
+.wave-button:focus {
+    text-decoration: none;
 }
 
 .wave-button span {
     display: inline-block;
     color: white;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
