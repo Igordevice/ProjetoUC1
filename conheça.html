@@ -1,124 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conhecendo seu café</title>
-  <link rel="stylesheet" href="Css/conheça.css">
-  <link rel="stylesheet" href="conheça.js">
+  <title>Incoffee</title>
+  <link>
+    <link rel="stylesheet" href="Css/conheça.css">
 </head>
 
 <body>
 
+  <div class="bg-glow"></div>
 
   <header>
-    <nav id="navbar">
-      <i id="nav_logo"> Incoffee</i>
-
-      <ul id="nav_list">
-        <li class="nav-item active">
-          <a href="index.html">Início</a>
-        </li>
-        <li class="nav-item">
-          <a href="cardapio.html">Cardápio</a>
-        </li>
-
-
+    <div class="logo">Incoffee</div>
+    <nav>
+      <a href="#" class="active">Início</a>
+      <a href="#menu">Cardápio</a>
+      <a href="#processo">Processo</a>
+      <a href="#" class="nav-cta">Reservar mesa</a>
+    </nav>
   </header>
 
-
-
-  <main class="carousel-container">
-    <div class="options">
-      <div>Black</div>
-      <div>Flat White</div>
-      <div>Latte</div>
-      <div>Cappuccino</div>
-      <div>Americano</div>
-      <div>Espresso</div>
-      <div>Doppio</div>
-      <div>Cortado</div>
-      <div>Macchiato</div>
-      <div>Mocha</div>
-      <div>Affogato</div>
-      <div>Con Panna</div>
-      <div>Irish</div>
-      <div>Cafe Au Lait</div>
-
-      <!-- vv repeats vv -->
-      <div>Black</div>
-      <div>Flat White</div>
-      <div>Latte</div>
-      <div>Cappuccino</div>
-      <div>Americano</div>
-      <div>Espresso</div>
-      <div>Doppio</div>
-      <div>Cortado</div>
-      <div>Macchiato</div>
-      <div>Mocha</div>
-      <div>Affogato</div>
-      <div>Con Panna</div>
-      <div>Irish</div>
-      <div>Cafe Au Lait</div>
-      <div>Black</div>
-      <div>Flat White</div>
-      <div>Latte</div>
-      <div>Cappuccino</div>
-      <div>Americano</div>
-      <div>Espresso</div>
-      <div>Doppio</div>
-      <div>Cortado</div>
-    </div>
-
-    <div class="wrapper">
-      <div class="shadow"></div>
-      <div class="title">Latte</div>
-      <div class="cup latte">
-        <div class="contents">
-          <div class="gelato">gelato</div>
-          <div class="foam">milk foam</div>
-          <div class="cream">cream</div>
-          <div class="steamed-milk">steamed milk</div>
-          <div class="milk">milk</div>
-          <div class="chocolate">chocolate</div>
-          <div class="sugar">sugar</div>
-          <div class="whiskey">whiskey</div>
-          <div class="water">water</div>
-          <div class="coffee">coffee</div>
-          <div class="espresso"><span>(2)&nbsp;</span> espresso</div>
-        </div>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Torra artesanal · Grãos de origem única</div>
+      <h1>Catorze formas de<br>tomar <em>o mesmo café</em>.</h1>
+      <p>Um espresso é só o começo. Gire a roda e descubra como um único grão vira quatorze bebidas diferentes — cada
+        uma com sua proporção, textura e ritual.</p>
+      <div class="hero-actions">
+        <button class="btn-primary">Ver cardápio completo</button>
+        <a href="#processo" class="btn-text">Conhecer a torra ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>14</strong><span>bebidas na roda</span></div>
+        <div><strong>3</strong><span>origens de grão</span></div>
+        <div><strong>92°C</strong><span>temperatura de extração</span></div>
       </div>
     </div>
 
-  </main>
-
-  
-    <footer>
-        <img src="Img/wave (1).svg" alt="">
-
-        <div id="footer_items">
-            <span id="copyright">
-                &copy 2026
-            </span>
-
-            <div class="social-media-buttons">
-                <a href="">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
+    <div class="stage" id="stage">
+      <div class="ring" id="ring"></div>
+      <div class="disc">
+        <div class="glass-wrap">
+          <div class="glass">
+            <div class="liquid water" id="liquidBack" style="height:0%"></div>
+            <div class="liquid espresso" id="liquidFront" style="height:0%"></div>
+            <div class="crema" id="crema" style="bottom:0%; opacity:0"></div>
+            <div class="label-tag" id="tagBack" style="bottom:60%">água</div>
+            <div class="label-tag" id="tagFront" style="bottom:8%">espresso</div>
+            <div class="glass-sheen"></div>
+          </div>
         </div>
-    </footer>
+        <div class="drink-name" id="drinkName">Americano</div>
+        <div class="drink-sub" id="drinkSub">1 dose · água quente</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="processo">
+    <div class="process">
+      <div style="padding: 64px 5%;">
+        <div class="section-head">
+          <h2>Da semente à xícara</h2>
+          <p>Cada etapa muda o sabor final — por isso torramos em pequenos lotes, todas as semanas.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="num">01</div>
+            <h3>Colheita</h3>
+            <p>Grãos selecionados à mão em fazendas parceiras, no pico de maturação.</p>
+          </div>
+          <div class="step">
+            <div class="num">02</div>
+            <h3>Torra</h3>
+            <p>Lotes pequenos, torrados por até 14 minutos para revelar doçura e corpo.</p>
+          </div>
+          <div class="step">
+            <div class="num">03</div>
+            <h3>Moagem</h3>
+            <p>Moída na hora do pedido, na granulometria certa para cada método.</p>
+          </div>
+          <div class="step">
+            <div class="num">04</div>
+            <h3>Extração</h3>
+            <p>Água a 92°C, pressão controlada — a base de toda bebida da roda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Incoffee</div>
+        <p>Café de origem única, torrado em pequenos lotes e servido com cuidado — todos os dias, na sua esquina.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Visite</h5>
+        <p>Rua dos Grãos, 128<br>São Paulo, SP</p>
+        <p>Seg–Sáb · 7h às 19h</p>
+      </div>
+      <div class="footer-col">
+        <h5>Menu</h5>
+        <a href="#menu">Cardápio completo</a>
+        <a href="#processo">Nosso processo</a>
+        <a href="#">Assinatura de grãos</a>
+      </div>
+      <div class="footer-col">
+        <h5>Fique por dentro</h5>
+        <p style="margin-bottom:10px;">Novidades de safra e torra, direto no seu e-mail.</p>
+        <div class="newsletter">
+          <input type="email" placeholder="seu e-mail">
+          <button>Enviar</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Incoffee</span>
+      <span>Instagram · WhatsApp · Google Maps</span>
+    </div>
+  </footer>
 
   <script src="conheça.js"></script>
+
 </body>
 
 </html>
