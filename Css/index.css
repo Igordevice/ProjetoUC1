@@ -942,6 +942,7 @@ body > h1 {
     margin-top: 120px;
   }
 
+  
   .hero__text-line {
     font-size: clamp(60px, 15vw, 150px);
     letter-spacing: -1px;
@@ -1023,71 +1024,6 @@ body > h1 {
     max-width: 380px;
   }
 
-  .navbar__brand,
-  #nav_logo {
-    font-size: 16px;
+  .nav-btn.next {
+    right: -10px;
   }
-
-  .btn-default,
-  #mobile_menu .btn-default {
-    padding: 0.6rem 1.2rem;
-    font-size: 12px;
-  }
-
-  .cardapio {
-    padding: 2rem 0.5rem;
-  }
-
-  .cardapio .chamada h2 {
-    font-size: 2rem;
-  }
-
-  .cardapio .chamada p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .lista-produtos {
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-
-  .produto {
-    flex: 0 0 200px;
-    padding: 140px 1rem 1rem;
-  }
-
-  .produto img {
-    width: 150px;
-    height: 150px;
-    top: -60px;
-  }
-
-  .produto h3 {
-    font-size: 1.1rem;
-  }
-
-  .produto p {
-    font-size: 0.85rem;
-  }
-
-  .controle {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .indicadores {
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-  }
-
-  .indicadores button {
-    width: 10px;
-    height: 10px;
-  }
-
-  .indicadores button.ativo {
-    width: 24px;
-  }
-}
