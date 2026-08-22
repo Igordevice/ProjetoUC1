@@ -921,6 +921,7 @@ h1 {
     margin-top: 120px;
   }
 
+  
   .hero__text-line {
     font-size: clamp(60px, 15vw, 150px);
     letter-spacing: -1px;
@@ -945,3 +946,4 @@ h1 {
   .nav-btn.next {
     right: -10px;
   }
+    }
