@@ -1,246 +1,156 @@
-// ======================================
-// INCOFFE - Coffee Shop JavaScript
-// ======================================
-
-// Get DOM Elements
+const hero = document.getElementById('hero');
 const coffeeImageWrapper = document.getElementById('coffeeImageWrapper');
-const coffeeImage = document.getElementById('coffeeImage');
 const heroTextLines = document.querySelectorAll('.hero__text-line');
-const navbarCtaButton = document.querySelector('.navbar__cta');
-const navbarLinks = document.querySelectorAll('.navbar__link');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-// ============ SCROLL EFFECTS ============
+if (hero && coffeeImageWrapper && !reduceMotion.matches) {
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const progress = Math.min(scrollY / hero.offsetHeight, 1);
 
-/**
- * Handles parallax and zoom effects on scroll
- * - Image scales up as user scrolls down
- * - Text moves at different speeds for parallax effect
- */
-function handleScrollEffects() {
-  const heroSection = document.getElementById('hero');
-  if (!heroSection || !coffeeImageWrapper) return; // só roda na home
-
-  const scrollY = window.scrollY;
-  const heroHeight = heroSection.offsetHeight;
-
-  // Calculate scroll progress (0 to 1)
-  const scrollProgress = Math.min(scrollY / heroHeight, 1);
-
-  // Image Zoom Effect: scales from 1 to 1.4
-  const imageScale = 1 + scrollProgress * 0.4;
-  coffeeImageWrapper.style.transform = `translate(-50%, calc(-40% + ${scrollY * 0.7}px)) scale(${imageScale})`;
-
-  // Text Parallax Effect: moves slower than scroll
-  const textOffset = scrollY * 0.2;
-  heroTextLines.forEach((line, index) => {
-    const lineOffset = textOffset * (0.8 + index * 0.1);
-    line.style.transform = `translateY(${lineOffset}px)`;
-  });
-}
-
-// Attach scroll event listener
-window.addEventListener('scroll', handleScrollEffects, { passive: true });
-
-// ============ CTA BUTTON ============
-
-if (navbarCtaButton) {
-  navbarCtaButton.addEventListener('click', () => {
-    alert('Pedido iniciado! 🎉');
-  });
-}
-
-// ============ SMOOTH SCROLL NAVIGATION ============
-
-navbarLinks.forEach(link => {
-  link.addEventListener('click', (event) => {
-    const href = link.getAttribute('href');
-
-    // Check if it's an anchor link
-    if (href && href.startsWith('#')) {
-      event.preventDefault();
-
-      const targetElement = document.querySelector(href);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }
-  });
-});
-
-// ============ PAGE LOAD INITIALIZATION ============
-
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('INCOFFE Website Loaded ✓');
-});
-
-// ============ CARROSSEL DE PRODUTOS (.carousel-track / .produto) ============
-
-const produtoTrack = document.querySelector('.carousel-track');
-const produtoPrevBtn = document.querySelector('.prev');
-const produtoNextBtn = document.querySelector('.next');
-
-if (produtoTrack && produtoPrevBtn && produtoNextBtn) {
-
-  let produtoIndex = 0;
-
-  function updateProdutoCarousel() {
-    const firstItem = produtoTrack.querySelector('.produto');
-    if (!firstItem) return;
-    const itemWidth = firstItem.offsetWidth + 24;
-    produtoTrack.style.transform = `translateX(-${produtoIndex * itemWidth}px)`;
-  }
-
-  produtoNextBtn.addEventListener('click', () => {
-    const items = produtoTrack.querySelectorAll('.produto');
-    if (produtoIndex < items.length - 1) {
-      produtoIndex++;
-      updateProdutoCarousel();
-    }
-  });
-
-  produtoPrevBtn.addEventListener('click', () => {
-    if (produtoIndex > 0) {
-      produtoIndex--;
-      updateProdutoCarousel();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    const items = produtoTrack.querySelectorAll('.produto');
-    if (produtoIndex >= items.length) {
-      produtoIndex = items.length - 1;
-    }
-    updateProdutoCarousel();
-  });
-}
-
-// ============ FILTRO DO CARDÁPIO (.filtro-btn / .card-produto) ============
-
-const filtroBotoes = document.querySelectorAll('.filtro-btn');
-const filtroCards = document.querySelectorAll('.card-produto');
-
-if (filtroBotoes.length && filtroCards.length) {
-  filtroBotoes.forEach(botao => {
-    botao.addEventListener('click', () => {
-      filtroBotoes.forEach(b => b.classList.remove('active'));
-      botao.classList.add('active');
-
-      const filtro = botao.dataset.filtro;
-
-      filtroCards.forEach(card => {
-        const categorias = card.dataset.categorias.split(' ');
-
-        if (filtro === 'todos' || categorias.includes(filtro)) {
-          card.classList.remove('escondido');
-        } else {
-          card.classList.add('escondido');
-        }
-      });
+    coffeeImageWrapper.style.transform = `translate(-50%, calc(-40% + ${scrollY * 0.7}px)) scale(${1 + progress * 0.4})`;
+    heroTextLines.forEach((line, index) => {
+      line.style.transform = `translateY(${scrollY * (0.16 + index * 0.02)}px)`;
     });
-  });
+  }, { passive: true });
 }
 
-// ============ CARROSSEL DE ENDEREÇOS (#track / .card) ============
+setupProductCarousel();
+setupStoreCarousel();
 
-const enderecoTrack = document.getElementById('track');
-const enderecoPrevBtn = document.getElementById('prevBtn');
-const enderecoNextBtn = document.getElementById('nextBtn');
-const enderecoDots = document.getElementById('dots');
+function setupProductCarousel() {
+  const viewport = document.querySelector('.janela-carrossel');
+  const list = document.querySelector('.lista-produtos');
+  const prev = document.querySelector('.controle-anterior');
+  const next = document.querySelector('.controle-proximo');
+  const dots = document.querySelector('.indicadores');
 
-if (enderecoTrack && enderecoPrevBtn && enderecoNextBtn && enderecoDots) {
+  if (!viewport || !list || !prev || !next || !dots) return;
 
-  const enderecoCards = Array.from(enderecoTrack.children);
-  let enderecoIndex = 0;
-  let cardsPerView = getCardsPerView();
+  const cards = Array.from(list.querySelectorAll('.produto'));
+  if (!cards.length) return;
 
-  function getCardsPerView() {
-    return window.innerWidth >= 900 ? 3 : 1;
+  let index = 0;
+
+  const cardLeft = (i) => cards[i].offsetLeft - cards[0].offsetLeft;
+  const update = () => {
+    Array.from(dots.children).forEach((dot, i) => {
+      const active = i === index;
+      dot.classList.toggle('ativo', active);
+      dot.setAttribute('aria-current', active ? 'true' : 'false');
+    });
+    prev.disabled = index === 0;
+    next.disabled = index === cards.length - 1;
+  };
+  const goTo = (i, behavior = 'smooth') => {
+    index = Math.max(0, Math.min(i, cards.length - 1));
+    viewport.scrollTo({ left: cardLeft(index), behavior });
+    update();
+  };
+
+  dots.innerHTML = '';
+  cards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Ir para produto ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dots.appendChild(dot);
+  });
+
+  viewport.addEventListener('scroll', () => {
+    const closest = cards.reduce((best, _, i) => {
+      const distance = Math.abs(viewport.scrollLeft - cardLeft(i));
+      return distance < Math.abs(viewport.scrollLeft - cardLeft(best)) ? i : best;
+    }, 0);
+
+    if (closest !== index) {
+      index = closest;
+      update();
+    }
+  }, { passive: true });
+
+  prev.addEventListener('click', () => goTo(index - 1));
+  next.addEventListener('click', () => goTo(index + 1));
+  window.addEventListener('resize', () => goTo(index, 'auto'));
+  goTo(0, 'auto');
+}
+
+function setupStoreCarousel() {
+  const track = document.getElementById('track');
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+  const dots = document.getElementById('dots');
+
+  if (!track || !prev || !next || !dots) return;
+
+  const cards = Array.from(track.children);
+  if (!cards.length) return;
+
+  let index = 0;
+  let perView = getPerView();
+
+  function getPerView() {
+    if (window.innerWidth >= 1000) return 3;
+    if (window.innerWidth >= 700) return 2;
+    return 1;
   }
 
-  function getMaxIndex() {
-    return Math.max(0, enderecoCards.length - cardsPerView);
-  }
-
-  function updateEnderecoCarousel() {
-    const cardWidthPercent = 100 / cardsPerView;
-    const offset = enderecoIndex * cardWidthPercent;
-    enderecoTrack.style.transform = `translateX(-${offset}%)`;
-
-    enderecoPrevBtn.disabled = enderecoIndex === 0;
-    enderecoNextBtn.disabled = enderecoIndex >= getMaxIndex();
-
-    updateDots();
-  }
-
-  function buildDots() {
-    enderecoDots.innerHTML = '';
-    const totalDots = getMaxIndex() + 1;
-    for (let i = 0; i < totalDots; i++) {
+  const maxIndex = () => Math.max(0, cards.length - perView);
+  const step = () => {
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return cards[0].getBoundingClientRect().width + gap;
+  };
+  const update = () => {
+    index = Math.max(0, Math.min(index, maxIndex()));
+    track.style.transform = `translateX(-${index * step()}px)`;
+    prev.disabled = index === 0;
+    next.disabled = index === maxIndex();
+    Array.from(dots.children).forEach((dot, i) => {
+      const active = i === index;
+      dot.classList.toggle('active', active);
+      dot.setAttribute('aria-current', active ? 'true' : 'false');
+    });
+  };
+  const buildDots = () => {
+    dots.innerHTML = '';
+    for (let i = 0; i <= maxIndex(); i++) {
       const dot = document.createElement('button');
-      dot.classList.add('dot');
-      if (i === enderecoIndex) dot.classList.add('active');
+      dot.type = 'button';
+      dot.className = 'dot';
+      dot.setAttribute('aria-label', `Ir para loja ${i + 1}`);
       dot.addEventListener('click', () => {
-        enderecoIndex = i;
-        updateEnderecoCarousel();
+        index = i;
+        update();
       });
-      enderecoDots.appendChild(dot);
+      dots.appendChild(dot);
     }
-  }
+  };
 
-  function updateDots() {
-    const dots = enderecoDots.querySelectorAll('.dot');
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === enderecoIndex));
-  }
-
-  enderecoPrevBtn.addEventListener('click', () => {
-    if (enderecoIndex > 0) {
-      enderecoIndex--;
-      updateEnderecoCarousel();
-    }
+  prev.addEventListener('click', () => {
+    index--;
+    update();
   });
-
-  enderecoNextBtn.addEventListener('click', () => {
-    if (enderecoIndex < getMaxIndex()) {
-      enderecoIndex++;
-      updateEnderecoCarousel();
-    }
+  next.addEventListener('click', () => {
+    index++;
+    update();
   });
-
   window.addEventListener('resize', () => {
-    cardsPerView = getCardsPerView();
-    enderecoIndex = Math.min(enderecoIndex, getMaxIndex());
+    perView = getPerView();
     buildDots();
-    updateEnderecoCarousel();
+    update();
   });
 
   let startX = 0;
-  let isDragging = false;
-
-  enderecoTrack.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
-  });
-
-  enderecoTrack.addEventListener('touchend', (e) => {
-    if (!isDragging) return;
-    const endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-
-    if (diff > 50 && enderecoIndex < getMaxIndex()) {
-      enderecoIndex++;
-    } else if (diff < -50 && enderecoIndex > 0) {
-      enderecoIndex--;
-    }
-    updateEnderecoCarousel();
-    isDragging = false;
+  track.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', (event) => {
+    const diff = startX - event.changedTouches[0].clientX;
+    if (diff > 50) index++;
+    if (diff < -50) index--;
+    update();
   });
 
   buildDots();
-  updateEnderecoCarousel();
+  update();
 }
-
-// ============BARRA DE PESQUISA ============
-

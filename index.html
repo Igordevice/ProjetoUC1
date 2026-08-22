@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INCOFFEE - Coffee Shop</title>
+  <title>INCOFFE - Coffee Shop</title>
   <link rel="stylesheet" href="Css/index.css" type="text/css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
   <header>
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Menu principal">
 
       <i id="nav_logo"> Incoffee </i>
 
@@ -57,24 +59,19 @@
     </div>
   </header>
 
-  <section class="hero" id="hero">
-    <img src="Img/grans de cafe .png" alt="Coffee Beans" class="hero__background-image">
+  <main id="conteudo-principal">
+  <section class="hero" id="hero" aria-labelledby="titulo-principal">
+    <h1 class="sr-only" id="titulo-principal">Incoffe Coffee Shop</h1>
+    <img src="Img/grans de cafe .png" alt="" class="hero__background-image" aria-hidden="true">
 
-    <div class="hero__text-background">
-      <h1 class="hero__text-line">INCOFFEE</h1>
-      <h1 class="hero__text-line">INCOFFEE</h1>
-      <h1 class="hero__text-line">INCOFFEE</h1>
+    <div class="hero__text-background" aria-hidden="true">
+      <h1 class="hero__text-line">INCOFFE</h1>
+      <h1 class="hero__text-line">INCOFFE</h1>
+      <h1 class="hero__text-line">INCOFFE</h1>
     </div>
 
     <div class="hero__image-wrapper" id="coffeeImageWrapper">
-      <img src="Img/Cafe dois home.png" alt="Iced Amber Latte" class="hero__product-image" id="coffeeImage">
-    </div>
-
-    <div class="hero__side-text">
-      <h2>cafe</h2>
-      <p>Somos apaixonados por criar experiências únicas e autênticas. Nosso compromisso é oferecer qualidade e atenção
-        aos detalhes em cada grão, unindo tradição e inovação para superar expectativas.</p>
-      <div class="dotted-lines"></div>
+      <img src="./Img/cafecentro (1).png" alt="Iced Amber Latte" class="hero__product-image">
     </div>
   </section>
 
@@ -86,8 +83,8 @@
         <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        
-     
+        <a class="wave-button" href="sobrenos.html">SAIBA MAIS</a>
+      </div>
 
       <div class="video-col">
         <div class="video-container">
@@ -101,75 +98,203 @@
     <div class="chamada">
       <h2>CARDÁPIO</h2>
       <p>Bebidas geladas, cafés clássicos, sobremesas e lanches preparados para acompanhar qualquer momento do dia.</p>
-      <button class="buttonC">Ver cardápio</button>
+      <a class="buttonC" href="cardapio.html">Cardápio completo</a>
     </div>
 
     <div class="carrossel-produtos" id="produtos" aria-label="Produtos do cardápio">
       <button class="controle controle-anterior" type="button" aria-label="Produto anterior">&#8249;</button>
 
-      <div class="janela-carrossel" tabindex="0">
+      <div class="janela-carrossel" role="region" aria-label="Lista rolável de produtos" tabindex="0">
         <div class="lista-produtos">
           <article class="produto">
-            <img src="./Img/Frapuccino.png" alt="Matcha latte">
+            <img src="./Img/Matcha.png" alt="Matcha Latte">
             <h3>Matcha Latte</h3>
             <div class="etiquetas">
               <span>gelado</span>
               <span>vegetal</span>
             </div>
-            <p>Matcha batido com leite cremoso, gelo e finalização suave de baunilha.</p>
-            <span class="circulo"></span>
+            <p>Matcha intenso batido com leite cremoso, gelo e finalização suave de baunilha.</p>
+            <span class="circulo" aria-hidden="true"></span>
           </article>
 
           <article class="produto">
-            <img src="./Img/Strawberry.png" alt="Sanduíche artesanal">
+            <img src="./Img/Img/SanduicheN.jpg" alt="Sanduíche artesanal">
             <h3>Sanduíche da Casa</h3>
             <div class="etiquetas">
               <span>quente</span>
               <span>artesanal</span>
             </div>
             <p>Pão tostado, queijo derretido, folhas frescas e recheio temperado na hora.</p>
-            <span class="circulo"></span>
+            <span class="circulo" aria-hidden="true"></span>
           </article>
 
           <article class="produto">
-            <img src="./Img/Matcha.png" alt="Bebida cremosa de morango">
+            <img src="./Img/Strawberry.png" alt="Bebida cremosa de morango">
             <h3>Morango Cream</h3>
             <div class="etiquetas">
               <span>frutado</span>
               <span>gelado</span>
             </div>
             <p>Leite gelado com calda de morango, espuma leve e pedaços da fruta.</p>
-            <span class="circulo"></span>
+            <span class="circulo" aria-hidden="true"></span>
           </article>
 
           <article class="produto">
-            <img src="./Img/Matcha.png" alt="Fatia de bolo banoffee">
-            <h3>Banoffee Slice</h3>
+            <img src="./Img/RedVelvet.png" alt="Fatia de bolo red velvet">
+            <h3>Red Velvet</h3>
             <div class="etiquetas">
               <span>doce</span>
               <span>cremoso</span>
             </div>
-            <p>Camadas de banana, doce de leite, creme fresco e base crocante.</p>
-            <span class="circulo"></span>
+            <p>Massa macia de cacau, creme aveludado e cobertura delicada para acompanhar o café.</p>
+            <span class="circulo" aria-hidden="true"></span>
+          </article>
+
+          <article class="produto">
+            <img src="./Img/Img/icedLatte.png" alt="Iced latte com gelo">
+            <h3>Iced Latte</h3>
+            <div class="etiquetas">
+              <span>espresso</span>
+              <span>gelado</span>
+            </div>
+            <p>Espresso encorpado com leite gelado, gelo cristalino e toque leve de caramelo.</p>
+            <span class="circulo" aria-hidden="true"></span>
+          </article>
+
+          <article class="produto">
+            <img src="./Img/Img/PãodeQueijo.png" alt="Pão de queijo">
+            <h3>Pão de Queijo</h3>
+            <div class="etiquetas">
+              <span>quentinho</span>
+              <span>sem glúten</span>
+            </div>
+            <p>Casquinha dourada, interior macio e sabor de queijo que combina com qualquer café.</p>
+            <span class="circulo" aria-hidden="true"></span>
+          </article>
+
+          <article class="produto">
+            <img src="./Img/torta de limão.png" alt="Torta de limão">
+            <h3>Torta de Limão</h3>
+            <div class="etiquetas">
+              <span>cítrico</span>
+              <span>doce</span>
+            </div>
+            <p>Base crocante, creme de limão equilibrado e cobertura leve para uma pausa fresca.</p>
+            <span class="circulo" aria-hidden="true"></span>
           </article>
         </div>
       </div>
 
       <button class="controle controle-proximo" type="button" aria-label="Próximo produto">&#8250;</button>
 
-      <div class="indicadores" aria-label="Navegação do carrossel">
-        <button class="ativo" type="button" aria-label="Ir para produto 1"></button>
-        <button type="button" aria-label="Ir para produto 2"></button>
-        <button type="button" aria-label="Ir para produto 3"></button>
-        <button type="button" aria-label="Ir para produto 4"></button>
-      </div>
+      <div class="indicadores" role="group" aria-label="Navegação do carrossel"></div>
     </div>
   </section>
 
-  <br>
+  <section class="ingredientes" id="ingredientes">
+    <div class="ingredientes__imagem">
+      <img src="Img/fancycrave1-coffee-819362_1920.jpg" alt="Café quente preparado com ingredientes selecionados">
+    </div>
 
-    <div class="dots" id="dots"></div>
-  </div>
+    <div class="ingredientes__conteudo">
+      <h2>INGREDIENTES</h2>
+      <p>Trabalhamos com grãos arábica selecionados, torra equilibrada e moagem feita para preservar aroma, corpo e doçura natural em cada preparo.</p>
+      <p>Nossas bebidas combinam leite cremoso, frutas frescas, cacau, baunilha e caldas artesanais para entregar sabor marcante sem perder leveza.</p>
+    </div>
+  </section>
+
+  <section class="lojas-fisicas" id="lojas">
+    <div class="lojas-cabecalho">
+      <span>São Paulo</span>
+      <h2>Lojas físicas</h2>
+      <p>Encontre uma unidade Incoffe para retirar seu pedido ou aproveitar uma pausa com café fresco.</p>
+    </div>
+
+    <div class="carousel-wrapper" role="region" aria-label="Carrossel de lojas físicas em São Paulo">
+      <button class="carousel-btn prev" id="prevBtn" type="button" aria-label="Loja anterior">&#8592;</button>
+
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="track">
+          <article class="loja-card">
+            <img src="Img/Endereço1.jpeg" alt="Fachada da loja Incoffe Oscar Freire">
+            <div class="loja-card__conteudo">
+              <span class="loja-card__bairro">Pinheiros</span>
+              <h3>Incoffe Oscar Freire</h3>
+              <p>R. Oscar Freire, 2.250 - Piso Café</p>
+              <p>Seg a sex: 7h às 19h</p>
+              <strong>(11) 3898-4740</strong>
+            </div>
+          </article>
+
+          <article class="loja-card">
+            <img src="Img/Endereço2.jpeg" alt="Ambiente da loja Incoffe Bela Vista">
+            <div class="loja-card__conteudo">
+              <span class="loja-card__bairro">Bela Vista</span>
+              <h3>Incoffe Bela Vista</h3>
+              <p>R. Dona Adma Jafet, 74</p>
+              <p>Seg a sex: 8h às 20h, sáb: 8h às 16h</p>
+              <strong>(11) 2894-2485</strong>
+            </div>
+          </article>
+
+          <article class="loja-card">
+            <img src="Img/Endereço3.jpeg" alt="Mesa de atendimento da loja Incoffe Vila Olímpia">
+            <div class="loja-card__conteudo">
+              <span class="loja-card__bairro">Vila Olímpia</span>
+              <h3>Incoffe Vila Olímpia</h3>
+              <p>R. Dr. Cardoso de Melo, 878</p>
+              <p>Seg a sex: 7h às 18h30</p>
+              <strong>(11) 3055-1820</strong>
+            </div>
+          </article>
+
+          <article class="loja-card">
+            <img src="Img/endereço4.png" alt="Interior da loja Incoffe Itaim Bibi">
+            <div class="loja-card__conteudo">
+              <span class="loja-card__bairro">Itaim Bibi</span>
+              <h3>Incoffe Itaim Bibi</h3>
+              <p>R. João Cachoeira, 1200</p>
+              <p>Seg a sex: 7h às 19h, sáb: 9h às 14h</p>
+              <strong>(11) 3345-6789</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" id="nextBtn" type="button" aria-label="Próxima loja">&#8594;</button>
+
+      <div class="dots" id="dots" role="group" aria-label="Navegação das lojas"></div>
+    </div>
+
+    <div class="mapa-lojas">
+      <div class="mapa-lojas__quadro">
+        <iframe
+          title="Mapa das lojas físicas Incoffe em São Paulo"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-46.7152%2C-23.6187%2C-46.5938%2C-23.5044&amp;layer=mapnik&amp;marker=-23.5614%2C-46.6559"
+          loading="lazy">
+        </iframe>
+        <div class="mapa-lojas__overlay" aria-hidden="true">
+          <span class="mapa-rua mapa-rua--principal"></span>
+          <span class="mapa-rua mapa-rua--diagonal"></span>
+          <span class="mapa-rua mapa-rua--vertical"></span>
+          <span class="mapa-rua mapa-rua--curta"></span>
+          <span class="mapa-pin mapa-pin--pinheiros"></span>
+          <span class="mapa-pin mapa-pin--bela"></span>
+          <span class="mapa-pin mapa-pin--vila"></span>
+          <span class="mapa-pin mapa-pin--itaim"></span>
+          <span class="mapa-bairro mapa-bairro--pinheiros">Pinheiros</span>
+          <span class="mapa-bairro mapa-bairro--bela">Bela Vista</span>
+          <span class="mapa-bairro mapa-bairro--vila">Vila Olímpia</span>
+          <span class="mapa-bairro mapa-bairro--itaim">Itaim Bibi</span>
+        </div>
+      </div>
+      <div class="mapa-lojas__legenda">
+        <strong>Região de atendimento</strong>
+        <span>Pinheiros, Bela Vista, Vila Olímpia e Itaim Bibi</span>
+      </div>
+    </div>
+  </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-container">
@@ -213,6 +338,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="acessibilidade.js"></script>
 </body>
 
 </html>
