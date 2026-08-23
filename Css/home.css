@@ -2,7 +2,8 @@
     display: flex;
     min-height: calc(100vh - 91px);
     position: relative;
-    overflow: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 #cta {
@@ -12,6 +13,7 @@
     gap: 28px;
     margin-top: 5%;
     position: relative;
+    z-index: 3;
    
 }
 
@@ -26,15 +28,24 @@
 
 #cta .title {
     font-size: 4rem;
-    color: var(--color-neutral-1);;
+     background: linear-gradient(to right, #525151,#1d1d1d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 #cta .title span {
-    color: var(--color-primary-6);
+    background: linear-gradient(to right, #f8d28b, #7a6248);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 #cta .description {
     font-size: 1.2rem;
+     background-color: #ffffff71;
+     border-radius: 5px;
+     
 }
 
 
@@ -78,23 +89,37 @@
 #phone_button button {
     box-shadow: none;
 }
+#bannerlat {
+    border: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
 
+}
 #bannerlat {
     position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    z-index: 2;
-    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    width: 30%;
 }
+#graof {
+    opacity: 85%;
+    position: absolute;
+    left: -30px;
+    width: 30%;
+    z-index: -1;
+
+}
+         
 
 #bannerlat img {
-    opacity: 85%;
-    width: 80%;
-    height: 80%;
+    opacity: 100%;
+    width: 100%;
+    height: auto;
     object-fit: contain;
 }
 #banner {
+    position: relative;
     display: flex;
     align-items: start;
     justify-content: end;
@@ -102,10 +127,19 @@
     z-index: 2;
 
 }
+#cafe_orginal{
+    width: 70%;
+    height: auto;
+    right: -50%;
+    top:200px;
+    position: absolute;
+    z-index: 2;
+}
 
-#banner img {
+#cafe03 {
     height: 70%;
     width: auto;
+    z-index: 1;
 }
 
 .shape {
@@ -118,6 +152,42 @@
     right: 0;
     z-index: 1;
 }
+#elementos {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+#elementos img {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    opacity: 0.8;
+}
+
+#p4 {
+    left: 1%;
+    top: 2400px;
+}
+
+#p3 {
+    right: 1%;
+    top: 1780px;
+    
+}
+
+#p2 {
+    right: 1%;
+    top: 3300px;
+  
+}
+#p5{
+    left:1%;
+    top:4200px;
+}
 
 @media screen and (max-width: 1170px) {
     #home {
@@ -125,10 +195,13 @@
         padding-top: 0px;
     }
 
-    #banner,
-    #banner img,
     #home .shape {
         display: none;
+    }
+
+    #banner {
+        display: none;
+        width: 100%;
     }
 
     #cta {

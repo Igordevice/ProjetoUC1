@@ -37,10 +37,16 @@ $(document).ready(function() {
     
 
 
-    ScrollReveal().reveal('#banner', {
+    ScrollReveal().reveal('#cafe03', {
+        origin: 'right',
+        duration: 4500,
+        distance: '70%'
+    });
+
+    ScrollReveal().reveal('#cafe_orginal', {
         origin: 'right',
         duration: 2000,
-        distance: '20%'
+        distance: '10%'
     });
 
     ScrollReveal().reveal('#cta', {
@@ -73,6 +79,21 @@ $(document).ready(function() {
         distance: '20%'
     })
 });
+
+
+
+
+        ScrollReveal().reveal('#graof', {
+        origin: 'left',
+        duration: 5000,
+        distance: '30%'
+    });
+
+            ScrollReveal().reveal('#liquidocafe', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
 
 
 let buttons = document.querySelectorAll('.wave-button');
