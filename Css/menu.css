@@ -1,5 +1,3 @@
-
-
 #menu {
     display: flex;
     flex-direction: column;
@@ -12,32 +10,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 8% 35px;
-    width: 60%;
+    width: min(100%, 680px);
+    padding: 20px 0 35px;
 }
 
-#pesquisaconteiner {
+#pesquisaconteiner,
+.input-group {
     width: 100%;
-    max-width: 600px;
 }
 
 .input-group {
-    width: 100%;
     height: 55px;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    gap: 12px;
+    padding: 6px 18px 6px 8px;
     border: 2px solid #7a6248;
     border-radius: 30px;
-    padding: 6px 18px 6px 8px;
-    gap: 12px;
+    background: #fff;
     box-shadow: 0 5px 15px rgba(96, 70, 70, 0.12);
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .input-group:focus-within {
-    border-color: var(--color-primary-6);
-    box-shadow: 0 5px 20px black;
+    border-color: #873214;
+    box-shadow: 0 8px 22px rgba(83, 39, 22, 0.18);
     transform: translateY(-2px);
 }
 
@@ -47,23 +44,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    color: #ffffff;
-    border-radius: 50%;
     flex-shrink: 0;
-    transition: all 0.3s ease;
-}
-
-.input-group:focus-within .input-icon {
-    background-color: var(--color-primary-6);
-    transform: scale(1.05);
+    border-radius: 50%;
+    background: #873214;
+    color: #fff;
 }
 
 .input-field {
     width: 100%;
-    border: none;
-    outline: none;
-    background-color: transparent;
+    border: 0;
+    outline: 0;
+    background: transparent;
     color: #1d1d1d;
     font-size: 15px;
 }
@@ -72,122 +63,170 @@
     color: #999;
 }
 
-.input-field:focus {
-    outline: none;
+.dishes {
+    width: min(1220px, 100%);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 36px 24px;
+    margin-top: 82px;
 }
-
-
-
-.mensagem-nenhum-produto {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    background-color: #fff9ea;
-    border: 1px solid #7a6248;
-    border-radius: 15px;
-}
-
-#menu2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 90px;
-}
-
-
-#dishes {
-    width: 100%;
-    display: flex;
-    align-items: stretch;   /* em vez de center */
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 32px;
-}
-
-
-    
 
 .dish {
+    position: relative;
+    min-height: 418px;
+    padding: 222px 22px 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    gap: 18px;
-    width: calc((100% - 60px) / 4);
-    min-height: 420px; 
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: var(--colorl-0-neutra);
+    align-items: flex-start;
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(180deg, rgba(248, 239, 229, 0) 0%, #d7a58e 18%, #9b3f1b 62%, #873214 100%);
+    color: #fff;
+    overflow: visible;
+    box-shadow: 0 10px 25px rgba(83, 39, 22, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.dish::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent 45%);
+    pointer-events: none;
+}
+
+.dish:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(83, 39, 22, 0.18);
+}
+
+.dish img {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.12));
+    transition: transform 0.35s ease;
+}
+
+.dish:hover img {
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.dish:nth-child(2) img,
+.dish:nth-child(8) img {
+    top: -62px;
+    width: 238px;
+    height: 210px;
+}
+
+.dish-title,
+.dish-description,
+.dish-rate,
+.dish-price {
     position: relative;
-    overflow: hidden;
-    transition: 0.5s;
+    z-index: 2;
+}
+
+.dish-title {
+    min-height: 44px;
+    margin: 0 0 10px;
+    color: #fff;
+    font-family: "Rockwell Extra Bold", "Rockwell", Georgia, serif;
+    font-size: 1.08rem;
+    font-weight: 900;
+    line-height: 1.08;
+    text-align: left;
 }
 
 .dish-description {
-    flex-grow: 1; 
+    flex: 1;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: left;
 }
-.dish img{
-    width: 60%;
-    height:300px;
-    object-fit: contain;
-}
 
-
-
-.dish-heart {
-    position: absolute;
-    background-color: #de4c45;
+.dish-rate {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.563rem;
-    color: var(--color-primary-1);
-    width: 60px;
-    height: 60px;
-    right: -10px;
-    top: -10px;
-    border-radius: 0px 37.5px 0px 42.5px;
-}
-
-.dish-description {
-    color: black;
-    text-align: center;
+    gap: 3px;
+    margin: 14px 0 16px;
+    color: rgba(255, 250, 244, 0.9);
+    font-size: 0.74rem;
 }
 
 .dish-rate i {
-    color: #faba32;
+    color: #f9ca5d;
 }
 
 .dish-price {
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: auto;
 }
 
-@media screen and (max-width: 1170px) {
-    #dishes {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.dish-price h4 {
+    color: #fffaf4;
+    font-size: 1.02rem;
+    font-weight: 900;
+}
 
-    .dish {
-        width: calc(50% - 12px);
+.dish-price .btn-default {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #fffaf4;
+    color: #873214;
+    box-shadow: none;
+}
+
+.dish-price .btn-default:hover {
+    background: #f1ded1;
+}
+
+.mensagem-nenhum-produto {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #7a6248;
+    border-radius: 8px;
+    background: #fff9ea;
+    color: #873214;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media screen and (max-width: 1180px) {
+    .dishes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .dishes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media screen and (max-width: 600px) {
-    .dish {
-        width: 100%;
-    }
-
     #menu .section-subtitle {
         text-align: center;
     }
-} 
+
+    .dishes {
+        grid-template-columns: minmax(0, 320px);
+        justify-content: center;
+    }
+}

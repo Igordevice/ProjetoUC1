@@ -116,7 +116,7 @@ buttons.forEach((button) => {
 document.addEventListener("DOMContentLoaded", function () {
     const campoPesquisa = document.querySelector(".input-field");
     const produtos = document.querySelectorAll(".dish");
-    const container = document.querySelector("#dishes");
+    const container = document.querySelector(".dishes");
 
     if (!campoPesquisa || !container) return;
 
@@ -239,6 +239,7 @@ let currentCard;
 function renderReviews() {
     const tplCard = document.querySelector("#tpl-card");
     const listCards = document.querySelector("#list-cards");
+    if (!tplCard || !listCards) return;
 
     REVIEWS.forEach((r, idx) => {
         const clone = tplCard.content.cloneNode(true);
@@ -259,14 +260,17 @@ function renderReviews() {
 
 // SLIDER
 function sliderInit() {
-    // add reviews to DOM
-    renderReviews()
-
     let currentİndex = 0;
     const slider = document.querySelector("#slider");
-    const slides = slider.querySelectorAll(".card");
-    const totalSlides = REVIEWS.length;
     const sliderButtons = document.querySelectorAll("[data-slide]");
+    if (!slider || !sliderButtons.length) return;
+
+    renderReviews()
+
+    const slides = slider.querySelectorAll(".card");
+    if (!slides.length || !currentCard) return;
+
+    const totalSlides = REVIEWS.length;
 
     sliderButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {

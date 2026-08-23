@@ -9,7 +9,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Css/styles.css">
     <link rel="stylesheet" href="./Css/feedbacks01.css">
-    <link rel="stylesheet" href="./Css/cardaNav.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -89,7 +88,7 @@
                     </a>
 
                     <a href="tel:+55555555555" id="phone_button">
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Ligar para a Incoffee">
                             <i class="fa-solid fa-phone"></i>
                         </button>
                         (51) 92342-3243
@@ -111,11 +110,11 @@
                 </div>
             </div>
             <div id="bannerlat">
-                <img src="Img\grãosCafé-removebg-preview (1).png">
+                <img src="Img/grãosCafé-removebg-preview (1).png" alt="">
             </div>
 
             <div id="banner">
-                <img src="Img\cafe03.png" alt="">
+                <img src="Img/cafe03.png" alt="">
             </div>
         </section>
 
@@ -149,7 +148,7 @@
         </div>
 
 
-        <!--    ==================== Menu 02 ====================-->
+        <!--    ==================== Cardápio ====================-->
 
 
 
@@ -158,8 +157,6 @@
         <section id="menu">
             <h2 class="section-title">Cardápio</h2>
             <h3 class="section-subtitle">Nossos pratos especiais</h3>
-
-            <!--    ==================== Barra de pesquisa ====================-->
 
             <section id="barradepesquisa">
                 <div id="pesquisaconteiner">
@@ -173,24 +170,12 @@
             </section>
 
 
-            <!--    ==================== Barra de pesquisa ====================-->
-
-
-
-            <div id="dishes">
+            <div class="dishes">
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-
-                    <!--    ==================== CARD 01====================-->
-
-
                     <h3 class="dish-title">
-                        Milkshake de bluberry
+                        Milkshake de Blueberry
                     </h3>
-                    <img src="Img/Bluberry.png" alt="milkshakeMorango">
+                    <img src="Img/Bluberry.png" alt="Milkshake de blueberry">
 
                     <span class="dish-description">
                         Cremoso, geladinho e feito com morangos selecionados. Zero lactose e sem adição de açúcares!
@@ -207,24 +192,20 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Milkshake de Blueberry ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
                     <h3 class="dish-title">
                         Torta de limão
                     </h3>
-                    <img src="Img/torta de limão.png" alt="TortaDeLimão">
+                    <img src="Img/torta de limão.png" alt="Torta de limão">
 
                     <span class="dish-description">
-                        O equilíbrio perfeito entre o acidez do limão e o chantilly leve sobre uma base crocante.
+                        O equilíbrio perfeito entre a acidez do limão e o chantilly leve sobre uma base crocante.
                     </span>
 
                     <div class="dish-rate">
@@ -238,21 +219,17 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Torta de limão ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
                     <h3 class="dish-title">
                         Frapuccino
                     </h3>
-                    <img src="Img\Frapuccino.png" alt="frapuccino">
+                    <img src="Img/Frapuccino.png" alt="Frapuccino">
                     <span class="dish-description">
                         Café gelado encorpado com toque de leite sem lactose e adoçado na medida certa, sem açúcar.
                     </span>
@@ -268,38 +245,16 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Frapuccino ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
-
-
-
-            </div>
-        </section>
-
-
-
-        <!--    ==================== Menu 02 ====================-->
-
-        <section id="menu2">
-
-            <div id="dishes">
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-
-
-                    <!--    ==================== CARD 01====================-->
-
-
                     <h3 class="dish-title">
                         Milkshake de Morango
                     </h3>
-                    <img src="Img/Strawberry.png" alt="milkshakeMorango">
+                    <img src="Img/Strawberry.png" alt="Milkshake de morango">
 
                     <span class="dish-description">
                         Cremoso, geladinho e feito com morangos selecionados. Zero lactose e sem adição de açúcares!
@@ -316,18 +271,13 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Milkshake de Morango ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-
                     <h3 class="dish-title">
                         Suco de kiwi
                     </h3>
@@ -349,21 +299,17 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Suco de kiwi ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
                     <h3 class="dish-title">
-                        Café sem gluten
+                        Café sem glúten
                     </h3>
-                    <img src="Img/SemGluten.png" alt="frapuccino">
+                    <img src="Img/SemGluten.png" alt="Café sem glúten">
                     <span class="dish-description">
                         Um café leve e saboroso, preparado com ingredientes cuidadosamente selecionados e sem glúten.
                         Perfeito para acompanhar aquele momento de pausa.
@@ -380,33 +326,16 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Café sem glúten ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
-
-            </div>
-        </section>
-
-        <!--    ==================== Menu 03 ====================-->
-
-        <section id="menu">
-            <div id="dishes">
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-
-
-                    <!--    ==================== CARD 01====================-->
-
-
                     <h3 class="dish-title">
                         Milkshake de Morango
                     </h3>
-                    <img src="Img/Strawberry.png" alt="milkshakeMorango">
+                    <img src="Img/Strawberry.png" alt="Milkshake de morango">
 
                     <span class="dish-description">
                         Cremoso, geladinho e feito com morangos selecionados. Zero lactose e sem adição de açúcares!
@@ -423,25 +352,20 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Milkshake de Morango ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-
                     <h3 class="dish-title">
                         Torta de limão
                     </h3>
-                    <img src="Img/torta de limão.png" alt="TortaDeLimão">
+                    <img src="Img/torta de limão.png" alt="Torta de limão">
 
                     <span class="dish-description">
-                        O equilíbrio perfeito entre o acidez do limão e o chantilly leve sobre uma base crocante.
+                        O equilíbrio perfeito entre a acidez do limão e o chantilly leve sobre uma base crocante.
                     </span>
 
                     <div class="dish-rate">
@@ -455,22 +379,17 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Torta de limão ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-
                     <h3 class="dish-title">
                         Frapuccino Cremoso
                     </h3>
-                    <img src="Img/FrapuccinoC.png" alt="frapuccino">
+                    <img src="Img/FrapuccinoC.png" alt="Frapuccino cremoso">
                     <span class="dish-description">
                         Café gelado encorpado com toque de leite sem lactose e adoçado na medida certa, sem açúcar.
                     </span>
@@ -486,7 +405,7 @@
 
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" type="button" aria-label="Adicionar Frapuccino Cremoso ao pedido">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
