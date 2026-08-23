@@ -441,31 +441,29 @@ input:focus-visible,
 .produto-nome,
 .produto-etiquetas,
 .produto-descricao,
-.produto-avaliacao,
 .produto-compra {
   position: relative;
   z-index: 2;
 }
 
 .produto-nome {
-  min-height: 44px;
-  margin-bottom: 7px;
+  margin-bottom: 20px;
   color: #fff;
   font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
-  font-size: 1.08rem;
-  line-height: 1.08;
+  font-size: clamp(1.34rem, 1.9vw, 1.68rem);
+  line-height: 1;
 }
 
 .produto-etiquetas {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 12px;
+  gap: 5px;
+  margin-bottom: 18px;
 }
 
 .produto-etiquetas span {
   min-width: 58px;
-  padding: 3px 9px;
+  padding: 2px 8px;
   border-radius: 20px;
   background: var(--creme);
   color: var(--marrom);
@@ -483,23 +481,9 @@ input:focus-visible,
   line-height: 1.35;
 }
 
-.produto-avaliacao {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin: 14px 0 16px;
-  color: rgba(255, 250, 244, 0.9);
-  font-size: 0.74rem;
-}
-
-.produto-avaliacao span {
-  margin-left: 5px;
-  font-weight: 700;
-}
-
 .produto-compra {
   width: 100%;
-  margin-top: auto;
+  margin-top: 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -538,76 +522,91 @@ input:focus-visible,
 }
 
 .comentarios-cardapio {
-  max-width: 1120px;
-  margin: 86px auto 0;
-  padding: 56px clamp(20px, 5vw, 58px);
-  border-radius: var(--raio);
-  background: linear-gradient(135deg, #fffaf4 0%, #f1ded1 100%);
-  box-shadow: 0 16px 34px rgba(83, 39, 22, 0.1);
+  max-width: 1260px;
+  margin: 96px auto 0;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.35fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 82px);
+}
+
+.comentarios-visual {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comentarios-visual img {
+  width: min(100%, 520px);
+  display: block;
+  filter: drop-shadow(0 22px 32px rgba(83, 39, 22, 0.16));
+}
+
+.comentarios-conteudo {
+  min-width: 0;
 }
 
 .comentarios-cabecalho {
-  max-width: 660px;
-  margin: 0 auto 34px;
-  text-align: center;
+  max-width: 780px;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 .comentarios-cabecalho h2 {
-  margin-bottom: 14px;
   color: var(--marrom);
   font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2.6rem, 5.4vw, 4.4rem);
   font-weight: 900;
   line-height: 1;
 }
 
-.comentarios-cabecalho p {
-  color: var(--texto-suave);
-}
-
 .lista-comentarios {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .comentario-card {
   display: flex;
-  gap: 18px;
-  padding: 22px;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 22px;
   border-radius: var(--raio);
-  background: var(--marrom);
-  color: var(--creme);
-  box-shadow: 0 12px 28px rgba(83, 39, 22, 0.14);
+  background: var(--creme);
+  color: var(--texto);
+  box-shadow: 0 12px 28px rgba(83, 39, 22, 0.12);
 }
 
 .comentario-avatar {
   width: 72px;
   height: 72px;
   flex: 0 0 auto;
-  border: 3px solid rgba(255, 250, 244, 0.7);
+  border: 3px solid #f1ded1;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .comentario-conteudo {
+  width: 100%;
   min-width: 0;
 }
 
 .comentario-topo {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .comentario-topo h3 {
-  color: #fff;
+  color: var(--marrom);
   font-size: 1rem;
 }
 
 .comentario-topo span {
-  color: #ead8c8;
+  color: var(--texto-suave);
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -615,19 +614,20 @@ input:focus-visible,
 .comentario-estrelas {
   display: flex;
   gap: 3px;
-  color: var(--caramelo);
+  color: var(--marrom);
   font-size: 0.82rem;
+  flex: 0 0 auto;
 }
 
 .comentario-conteudo p {
-  color: rgba(255, 250, 244, 0.92);
+  color: var(--texto);
   font-size: 0.92rem;
   font-weight: 600;
   line-height: 1.45;
 }
 
 .comentarios-acao {
-  margin-top: 30px;
+  margin-top: 26px;
   text-align: center;
 }
 
@@ -636,12 +636,14 @@ input:focus-visible,
   min-height: 46px;
   align-items: center;
   justify-content: center;
-  padding: 11px 26px;
+  padding: 11px 36px;
   border-radius: var(--raio);
   background: var(--marrom);
   color: #fff;
   font-size: 0.86rem;
   font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -784,8 +786,21 @@ input:focus-visible,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lista-comentarios {
+  .comentarios-cardapio {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .comentarios-visual {
+    min-height: 0;
+  }
+
+  .comentarios-visual img {
+    width: min(100%, 430px);
+  }
+
+  .comentarios-cabecalho {
+    text-align: center;
   }
 
   .rodape-conteudo {
@@ -863,15 +878,19 @@ input:focus-visible,
 
   .comentarios-cardapio {
     margin-top: 68px;
-    padding: 38px 18px;
   }
 
   .comentario-card {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .comentario-topo {
     flex-direction: column;
+  }
+
+  .comentarios-acao {
+    text-align: left;
   }
 }
 
