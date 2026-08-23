@@ -1,0 +1,890 @@
+:root {
+  --marrom: #873214;
+  --marrom-escuro: #6e2f08;
+  --rosa: #b05c6b;
+  --creme: #fffaf4;
+  --fundo-claro: #f8efe5;
+  --texto: #2c2c2a;
+  --texto-suave: #6f6258;
+  --caramelo: #d9b38c;
+  --borda: rgba(88, 87, 84, 0.1);
+  --raio: 8px;
+  --transicao: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: #faf8f3;
+  color: var(--texto);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  transition: color var(--transicao), background var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+}
+
+.link-pular {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 2000;
+  transform: translateY(-140%);
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: var(--creme);
+  color: var(--marrom);
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(83, 39, 22, 0.2);
+  transition: transform var(--transicao);
+}
+
+.link-pular:focus {
+  transform: translateY(0);
+}
+
+.texto-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--rosa);
+  outline-offset: 3px;
+}
+
+#barra-navegacao {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 0.5px solid var(--borda);
+  background: var(--marrom);
+}
+
+#barra-navegacao.com-sombra {
+  box-shadow: 0 8px 22px rgba(70, 32, 14, 0.14);
+}
+
+#logo-navegacao {
+  color: var(--creme);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#lista-navegacao,
+#lista-mobile {
+  list-style: none;
+}
+
+#lista-navegacao {
+  display: flex;
+  gap: 2rem;
+  font-size: 14px;
+}
+
+#lista-navegacao a,
+#lista-mobile a {
+  color: var(--creme);
+  text-decoration: none;
+}
+
+#lista-navegacao a:hover,
+.item-navegacao.ativo a {
+  color: #fff;
+}
+
+#botao-mobile {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--creme);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#menu-mobile {
+  position: fixed;
+  top: 73px;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  display: none;
+  padding: 18px 24px 24px;
+  background: var(--marrom);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 30px rgba(70, 32, 14, 0.18);
+}
+
+#menu-mobile.ativo {
+  display: block;
+}
+
+#lista-mobile {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.botao-padrao,
+.botao-cardapio,
+.produto-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--raio);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao-padrao {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: var(--creme);
+  color: var(--marrom);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cabecalho-cardapio {
+  position: relative;
+  min-height: 88vh;
+  padding: 130px clamp(24px, 6vw, 86px) 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.8fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 72px);
+  overflow: hidden;
+  background: #f7f2ea;
+}
+
+.cabecalho-texto-fundo {
+  position: absolute;
+  inset: 80px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cabecalho-texto-fundo span {
+  color: rgba(139, 69, 19, 0.16);
+  font-family: "Rockwell Extra Bold", Rockwell, "Cooper Black", Georgia, serif;
+  font-size: clamp(4.8rem, 15vw, 13rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.9;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cabecalho-texto-fundo span:nth-child(2) {
+  color: rgba(139, 69, 19, 0.11);
+}
+
+.cabecalho-texto-fundo span:nth-child(3) {
+  color: rgba(139, 69, 19, 0.07);
+}
+
+.cabecalho-conteudo,
+.cabecalho-imagem {
+  position: relative;
+  z-index: 2;
+}
+
+.cabecalho-conteudo {
+  max-width: 640px;
+}
+
+.selo-cardapio {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: #f1ded1;
+  color: var(--marrom);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cabecalho-conteudo h1,
+.cardapio-cabecalho h2 {
+  color: var(--marrom);
+  font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+
+.cabecalho-conteudo h1 {
+  margin-bottom: 24px;
+  font-size: clamp(3.2rem, 8vw, 6.7rem);
+}
+
+.cabecalho-conteudo p {
+  max-width: 520px;
+  margin-bottom: 30px;
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+.botao-cardapio {
+  min-height: 48px;
+  min-width: 190px;
+  padding: 12px 28px;
+  background: var(--marrom);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.botao-cardapio:hover {
+  background: var(--marrom-escuro);
+  transform: translateY(-2px);
+}
+
+.cabecalho-imagem {
+  justify-self: center;
+  width: min(460px, 82vw);
+}
+
+.cabecalho-imagem img {
+  display: block;
+  width: 100%;
+  filter: drop-shadow(0 22px 48px rgba(83, 39, 22, 0.18));
+}
+
+.cardapio-pagina {
+  position: relative;
+  padding: 88px clamp(18px, 5vw, 72px) 92px;
+  background: var(--fundo-claro);
+}
+
+.cardapio-pagina::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(80%, 960px);
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--caramelo);
+}
+
+.cardapio-cabecalho {
+  max-width: 700px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.cardapio-cabecalho h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2.8rem, 8vw, 4.8rem);
+}
+
+.cardapio-cabecalho p {
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--texto-suave);
+}
+
+.barra-pesquisa {
+  max-width: 650px;
+  margin: 0 auto 72px;
+}
+
+.campo-pesquisa {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 18px;
+  border: 2px solid rgba(135, 50, 20, 0.18);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(83, 39, 22, 0.08);
+}
+
+.campo-pesquisa:focus-within {
+  border-color: var(--marrom);
+  box-shadow: 0 16px 32px rgba(83, 39, 22, 0.13);
+  transform: translateY(-2px);
+}
+
+.campo-pesquisa i {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--marrom);
+  color: #fff;
+  flex: 0 0 auto;
+}
+
+.input-pesquisa {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--texto);
+  font: inherit;
+}
+
+.input-pesquisa::placeholder {
+  color: #9d8e82;
+}
+
+.grade-produtos {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 92px 24px;
+}
+
+.produto-card {
+  position: relative;
+  min-height: 430px;
+  padding: 218px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: visible;
+  border-radius: 0 0 var(--raio) var(--raio);
+  background: linear-gradient(180deg, rgba(248, 239, 229, 0) 0%, #d7a58e 18%, #9b3f1b 62%, var(--marrom) 100%);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(83, 39, 22, 0.12);
+}
+
+.produto-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent 45%);
+  pointer-events: none;
+}
+
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(83, 39, 22, 0.18);
+}
+
+.produto-card[hidden] {
+  display: none;
+}
+
+.produto-card img {
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.12));
+  transition: transform var(--transicao);
+}
+
+.produto-card:hover img {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.produto-card--largo img {
+  top: -34px;
+  width: 248px;
+  height: 206px;
+  mix-blend-mode: multiply;
+}
+
+.produto-nome,
+.produto-etiquetas,
+.produto-descricao,
+.produto-avaliacao,
+.produto-compra {
+  position: relative;
+  z-index: 2;
+}
+
+.produto-nome {
+  min-height: 44px;
+  margin-bottom: 7px;
+  color: #fff;
+  font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.08;
+}
+
+.produto-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.produto-etiquetas span {
+  min-width: 58px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--creme);
+  color: var(--marrom);
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.produto-descricao {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.produto-avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 14px 0 16px;
+  color: rgba(255, 250, 244, 0.9);
+  font-size: 0.74rem;
+}
+
+.produto-avaliacao span {
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.produto-compra {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.produto-compra strong {
+  font-size: 1rem;
+}
+
+.produto-botao {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  background: var(--creme);
+  color: var(--marrom);
+  font-size: 1rem;
+}
+
+.produto-botao:hover {
+  background: #f1ded1;
+  transform: translateY(-2px);
+}
+
+.mensagem-sem-produto {
+  max-width: 650px;
+  margin: 34px auto 0;
+  padding: 18px 22px;
+  border: 1px solid rgba(135, 50, 20, 0.18);
+  border-radius: var(--raio);
+  background: #fff;
+  color: var(--marrom);
+  font-weight: 800;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(83, 39, 22, 0.08);
+}
+
+.comentarios-cardapio {
+  max-width: 1120px;
+  margin: 86px auto 0;
+  padding: 56px clamp(20px, 5vw, 58px);
+  border-radius: var(--raio);
+  background: linear-gradient(135deg, #fffaf4 0%, #f1ded1 100%);
+  box-shadow: 0 16px 34px rgba(83, 39, 22, 0.1);
+}
+
+.comentarios-cabecalho {
+  max-width: 660px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.comentarios-cabecalho h2 {
+  margin-bottom: 14px;
+  color: var(--marrom);
+  font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.comentarios-cabecalho p {
+  color: var(--texto-suave);
+}
+
+.lista-comentarios {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.comentario-card {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+  border-radius: var(--raio);
+  background: var(--marrom);
+  color: var(--creme);
+  box-shadow: 0 12px 28px rgba(83, 39, 22, 0.14);
+}
+
+.comentario-avatar {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 auto;
+  border: 3px solid rgba(255, 250, 244, 0.7);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comentario-conteudo {
+  min-width: 0;
+}
+
+.comentario-topo {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.comentario-topo h3 {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.comentario-topo span {
+  color: #ead8c8;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.comentario-estrelas {
+  display: flex;
+  gap: 3px;
+  color: var(--caramelo);
+  font-size: 0.82rem;
+}
+
+.comentario-conteudo p {
+  color: rgba(255, 250, 244, 0.92);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.comentarios-acao {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.botao-comentarios {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 26px;
+  border-radius: var(--raio);
+  background: var(--marrom);
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.botao-comentarios:hover {
+  background: var(--marrom-escuro);
+  transform: translateY(-2px);
+}
+
+.rodape {
+  padding: 50px 60px 20px;
+  background: var(--marrom-escuro);
+  color: #fff8f8;
+}
+
+.rodape-conteudo {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.rodape-marca {
+  width: 280px;
+}
+
+.rodape-marca h2 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.rodape-marca p,
+.rodape-contato p,
+.rodape-base p {
+  color: #ead8c8;
+}
+
+.rodape-links,
+.rodape-contato,
+.rodape-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rodape h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.rodape-links a {
+  color: #ead8c8;
+  text-decoration: none;
+}
+
+.rodape-links a:hover {
+  color: var(--caramelo);
+}
+
+.icones-sociais {
+  display: flex;
+  gap: 12px;
+}
+
+.icones-sociais a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--marrom-escuro);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.icones-sociais a:hover {
+  transform: translateY(-5px);
+  background: var(--caramelo);
+  color: #fff;
+}
+
+.rodape-base {
+  margin-top: 45px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+}
+
+.rodape-base p {
+  font-size: 13px;
+}
+
+@media (min-width: 901px) {
+  #menu-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .grade-produtos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  #lista-navegacao {
+    display: none;
+  }
+
+  #botao-mobile {
+    display: block;
+  }
+
+  .cabecalho-cardapio {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    padding-top: 118px;
+    text-align: center;
+  }
+
+  .cabecalho-conteudo {
+    margin: 0 auto;
+  }
+
+  .cabecalho-conteudo p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .cabecalho-imagem {
+    width: min(360px, 76vw);
+  }
+
+  .grade-produtos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lista-comentarios {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape-conteudo {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  #barra-navegacao {
+    padding: 1rem;
+  }
+
+  #menu-mobile {
+    top: 61px;
+  }
+
+  .cabecalho-conteudo h1 {
+    font-size: clamp(3rem, 16vw, 4.8rem);
+  }
+
+  .cardapio-pagina {
+    padding: 68px 18px 72px;
+  }
+
+  .barra-pesquisa {
+    margin-bottom: 62px;
+  }
+
+  .produto-card {
+    min-height: 408px;
+    padding: 202px 20px 24px;
+  }
+
+  .produto-card img {
+    top: -42px;
+    width: 202px;
+    height: 202px;
+  }
+
+  .produto-card--largo img {
+    top: -30px;
+    width: 220px;
+    height: 184px;
+  }
+
+  .rodape {
+    padding: 40px 24px 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cabecalho-cardapio {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .cabecalho-texto-fundo span {
+    font-size: clamp(3.5rem, 19vw, 5.5rem);
+  }
+
+  .grade-produtos {
+    grid-template-columns: 1fr;
+    gap: 82px;
+  }
+
+  .produto-card {
+    width: min(100%, 292px);
+    margin: 0 auto;
+  }
+
+  .campo-pesquisa {
+    height: auto;
+    min-height: 56px;
+  }
+
+  .comentarios-cardapio {
+    margin-top: 68px;
+    padding: 38px 18px;
+  }
+
+  .comentario-card {
+    flex-direction: column;
+  }
+
+  .comentario-topo {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

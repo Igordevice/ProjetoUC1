@@ -1,156 +1,80 @@
-const hero = document.getElementById('hero');
-const coffeeImageWrapper = document.getElementById('coffeeImageWrapper');
-const heroTextLines = document.querySelectorAll('.hero__text-line');
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const secaoInicio = document.querySelector('.inicio');
+const imagemInicio = document.querySelector('.inicio-produto');
+const textosInicio = document.querySelectorAll('.inicio-texto-linha');
+const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-if (hero && coffeeImageWrapper && !reduceMotion.matches) {
+if (secaoInicio && imagemInicio && !reduzirMovimento.matches) {
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const progress = Math.min(scrollY / hero.offsetHeight, 1);
+    const rolagem = window.scrollY;
+    const progresso = Math.min(rolagem / secaoInicio.offsetHeight, 1);
 
-    coffeeImageWrapper.style.transform = `translate(-50%, calc(-40% + ${scrollY * 0.7}px)) scale(${1 + progress * 0.4})`;
-    heroTextLines.forEach((line, index) => {
-      line.style.transform = `translateY(${scrollY * (0.16 + index * 0.02)}px)`;
+    imagemInicio.style.transform = `translate(-50%, calc(-40% + ${rolagem * 0.7}px)) scale(${1 + progresso * 0.4})`;
+    textosInicio.forEach((linha, indice) => {
+      linha.style.transform = `translateY(${rolagem * (0.16 + indice * 0.02)}px)`;
     });
   }, { passive: true });
 }
 
-setupProductCarousel();
-setupStoreCarousel();
+configurarCarrosselCardapio();
 
-function setupProductCarousel() {
-  const viewport = document.querySelector('.janela-carrossel');
-  const list = document.querySelector('.lista-produtos');
-  const prev = document.querySelector('.controle-anterior');
-  const next = document.querySelector('.controle-proximo');
-  const dots = document.querySelector('.indicadores');
+function configurarCarrosselCardapio() {
+  const janela = document.querySelector('.carrossel-janela');
+  const lista = document.querySelector('.lista-produtos');
+  const anterior = document.querySelector('.botao-carrossel--anterior');
+  const proximo = document.querySelector('.botao-carrossel--proximo');
+  const indicadores = document.querySelector('.indicadores');
 
-  if (!viewport || !list || !prev || !next || !dots) return;
+  if (!janela || !lista || !anterior || !proximo || !indicadores) return;
 
-  const cards = Array.from(list.querySelectorAll('.produto'));
-  if (!cards.length) return;
+  const produtos = Array.from(lista.querySelectorAll('.produto'));
+  if (!produtos.length) return;
 
-  let index = 0;
+  let indiceAtual = 0;
 
-  const cardLeft = (i) => cards[i].offsetLeft - cards[0].offsetLeft;
-  const update = () => {
-    Array.from(dots.children).forEach((dot, i) => {
-      const active = i === index;
-      dot.classList.toggle('ativo', active);
-      dot.setAttribute('aria-current', active ? 'true' : 'false');
+  const posicaoProduto = (indice) => produtos[indice].offsetLeft - produtos[0].offsetLeft;
+
+  const atualizarEstado = () => {
+    Array.from(indicadores.children).forEach((indicador, indice) => {
+      const ativo = indice === indiceAtual;
+      indicador.classList.toggle('ativo', ativo);
+      indicador.setAttribute('aria-current', ativo ? 'true' : 'false');
     });
-    prev.disabled = index === 0;
-    next.disabled = index === cards.length - 1;
-  };
-  const goTo = (i, behavior = 'smooth') => {
-    index = Math.max(0, Math.min(i, cards.length - 1));
-    viewport.scrollTo({ left: cardLeft(index), behavior });
-    update();
+
+    anterior.disabled = indiceAtual === 0;
+    proximo.disabled = indiceAtual === produtos.length - 1;
   };
 
-  dots.innerHTML = '';
-  cards.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.setAttribute('aria-label', `Ir para produto ${i + 1}`);
-    dot.addEventListener('click', () => goTo(i));
-    dots.appendChild(dot);
+  const irParaProduto = (indice, comportamento = 'smooth') => {
+    indiceAtual = Math.max(0, Math.min(indice, produtos.length - 1));
+    janela.scrollTo({ left: posicaoProduto(indiceAtual), behavior: comportamento });
+    atualizarEstado();
+  };
+
+  indicadores.innerHTML = '';
+  produtos.forEach((_, indice) => {
+    const indicador = document.createElement('button');
+    indicador.type = 'button';
+    indicador.setAttribute('aria-label', `Ir para produto ${indice + 1}`);
+    indicador.addEventListener('click', () => irParaProduto(indice));
+    indicadores.appendChild(indicador);
   });
 
-  viewport.addEventListener('scroll', () => {
-    const closest = cards.reduce((best, _, i) => {
-      const distance = Math.abs(viewport.scrollLeft - cardLeft(i));
-      return distance < Math.abs(viewport.scrollLeft - cardLeft(best)) ? i : best;
+  janela.addEventListener('scroll', () => {
+    const maisProximo = produtos.reduce((melhor, _, indice) => {
+      const distanciaAtual = Math.abs(janela.scrollLeft - posicaoProduto(indice));
+      const melhorDistancia = Math.abs(janela.scrollLeft - posicaoProduto(melhor));
+      return distanciaAtual < melhorDistancia ? indice : melhor;
     }, 0);
 
-    if (closest !== index) {
-      index = closest;
-      update();
+    if (maisProximo !== indiceAtual) {
+      indiceAtual = maisProximo;
+      atualizarEstado();
     }
   }, { passive: true });
 
-  prev.addEventListener('click', () => goTo(index - 1));
-  next.addEventListener('click', () => goTo(index + 1));
-  window.addEventListener('resize', () => goTo(index, 'auto'));
-  goTo(0, 'auto');
-}
+  anterior.addEventListener('click', () => irParaProduto(indiceAtual - 1));
+  proximo.addEventListener('click', () => irParaProduto(indiceAtual + 1));
+  window.addEventListener('resize', () => irParaProduto(indiceAtual, 'auto'));
 
-function setupStoreCarousel() {
-  const track = document.getElementById('track');
-  const prev = document.getElementById('prevBtn');
-  const next = document.getElementById('nextBtn');
-  const dots = document.getElementById('dots');
-
-  if (!track || !prev || !next || !dots) return;
-
-  const cards = Array.from(track.children);
-  if (!cards.length) return;
-
-  let index = 0;
-  let perView = getPerView();
-
-  function getPerView() {
-    if (window.innerWidth >= 1000) return 3;
-    if (window.innerWidth >= 700) return 2;
-    return 1;
-  }
-
-  const maxIndex = () => Math.max(0, cards.length - perView);
-  const step = () => {
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return cards[0].getBoundingClientRect().width + gap;
-  };
-  const update = () => {
-    index = Math.max(0, Math.min(index, maxIndex()));
-    track.style.transform = `translateX(-${index * step()}px)`;
-    prev.disabled = index === 0;
-    next.disabled = index === maxIndex();
-    Array.from(dots.children).forEach((dot, i) => {
-      const active = i === index;
-      dot.classList.toggle('active', active);
-      dot.setAttribute('aria-current', active ? 'true' : 'false');
-    });
-  };
-  const buildDots = () => {
-    dots.innerHTML = '';
-    for (let i = 0; i <= maxIndex(); i++) {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'dot';
-      dot.setAttribute('aria-label', `Ir para loja ${i + 1}`);
-      dot.addEventListener('click', () => {
-        index = i;
-        update();
-      });
-      dots.appendChild(dot);
-    }
-  };
-
-  prev.addEventListener('click', () => {
-    index--;
-    update();
-  });
-  next.addEventListener('click', () => {
-    index++;
-    update();
-  });
-  window.addEventListener('resize', () => {
-    perView = getPerView();
-    buildDots();
-    update();
-  });
-
-  let startX = 0;
-  track.addEventListener('touchstart', (event) => {
-    startX = event.touches[0].clientX;
-  }, { passive: true });
-  track.addEventListener('touchend', (event) => {
-    const diff = startX - event.changedTouches[0].clientX;
-    if (diff > 50) index++;
-    if (diff < -50) index--;
-    update();
-  });
-
-  buildDots();
-  update();
+  irParaProduto(0, 'auto');
 }

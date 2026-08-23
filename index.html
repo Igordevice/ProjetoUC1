@@ -10,320 +10,249 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <a class="link-pular" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
   <header>
-    <nav id="navbar" aria-label="Menu principal">
+    <nav id="barra-navegacao" aria-label="Menu principal">
+      <i id="logo-navegacao">Incoffee</i>
 
-      <i id="nav_logo"> Incoffee </i>
-
-      <ul id="nav_list">
-        <li class="nav-item active">
-          <a href="#home">Início</a>
-        </li>
-        <li class="nav-item">
-          <a href="cardapio.html">Cardápio</a>
-        </li>
-        <li class="nav-item">
-          <a href="conheça.html">Conheça seu café</a>
-        </li>
-        <li class="nav-item">
-          <a href="sobrenos.html">sobre-nós</a>
-        </li>
-        <li class="nav-item">
-          <a href="#testimonials">Avaliações</a>
-        </li>
+      <ul id="lista-navegacao">
+        <li class="item-navegacao ativo"><a href="#inicio">Início</a></li>
+        <li class="item-navegacao"><a href="cardapio.html">Cardápio</a></li>
+        <li class="item-navegacao"><a href="conheça.html">Conheça seu café</a></li>
+        <li class="item-navegacao"><a href="sobrenos.html">sobre-nós</a></li>
+        <li class="item-navegacao"><a href="#testimonials">Avaliações</a></li>
       </ul>
 
-      <button id="mobile_btn">
+      <button id="botao-mobile" type="button" aria-label="Abrir menu">
         <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
 
-    <div id="mobile_menu">
-      <ul id="mobile_nav_list">
-        <li class="nav-item">
-          <a href="#home">Início</a>
-        </li>
-        <li class="nav-item">
-          <a href="#menu">Cardápio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#testimonials">Avaliações</a>
-        </li>
+    <div id="menu-mobile">
+      <ul id="lista-mobile">
+        <li class="item-navegacao"><a href="#inicio">Início</a></li>
+        <li class="item-navegacao"><a href="#cardapio">Cardápio</a></li>
+        <li class="item-navegacao"><a href="#testimonials">Avaliações</a></li>
       </ul>
 
-      <button class="btn-default">
-        Peça aqui
-      </button>
+      <button class="botao-padrao" type="button">Peça aqui</button>
     </div>
   </header>
 
   <main id="conteudo-principal">
-  <section class="hero" id="hero" aria-labelledby="titulo-principal">
-    <h1 class="sr-only" id="titulo-principal">Incoffe Coffee Shop</h1>
-    <img src="Img/grans de cafe .png" alt="" class="hero__background-image" aria-hidden="true">
+    <section class="inicio" id="inicio" aria-labelledby="titulo-principal">
+      <h1 class="texto-oculto" id="titulo-principal">Incoffe Coffee Shop</h1>
+      <img class="inicio-fundo-graos" src="Img/grans de cafe .png" alt="" aria-hidden="true">
 
-    <div class="hero__text-background" aria-hidden="true">
-      <h1 class="hero__text-line">INCOFFE</h1>
-      <h1 class="hero__text-line">INCOFFE</h1>
-      <h1 class="hero__text-line">INCOFFE</h1>
-    </div>
-
-    <div class="hero__image-wrapper" id="coffeeImageWrapper">
-      <img src="./Img/cafecentro (1).png" alt="Iced Amber Latte" class="hero__product-image">
-    </div>
-  </section>
-
-  <section class="sobre-nos">
-    <div class="container">
-      <div class="texto-col">
-        <h2 class="titulo">SOBRE NÓS</h2>
-        <p class="subtitulo">Subtítulo opcional</p>
-        <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-        <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a class="wave-button" href="sobrenos.html">SAIBA MAIS</a>
+      <div class="inicio-texto-fundo" aria-hidden="true">
+        <span class="inicio-texto-linha">INCOFFE</span>
+        <span class="inicio-texto-linha">INCOFFE</span>
+        <span class="inicio-texto-linha">INCOFFE</span>
       </div>
 
-      <div class="video-col">
-        <div class="video-container">
-          <video src="./videos/Vcoffee.mp4" autoplay muted loop playsinline></video>
+      <div class="inicio-produto">
+        <img class="inicio-imagem-produto" src="./Img/cafecentro (1).png" alt="Iced Amber Latte">
+      </div>
+    </section>
+
+    <section class="sobre-nos" id="sobre-nos">
+      <div class="sobre-conteudo">
+        <div class="sobre-texto">
+          <h2 class="titulo-secao">SOBRE NÓS</h2>
+          <p class="texto-secao">
+            A Incoffe nasceu para transformar a pausa do café em um momento acolhedor, simples e cheio de sabor.
+            Selecionamos ingredientes de qualidade e preparamos cada bebida com cuidado.
+          </p>
+          <p class="texto-secao">
+            Nosso espaço combina bebidas geladas, cafés clássicos, lanches e sobremesas para acompanhar estudos,
+            encontros e pequenas pausas no dia.
+          </p>
+          <a class="botao-secundario" href="sobrenos.html">SAIBA MAIS</a>
+        </div>
+
+        <div class="sobre-video">
+          <div class="quadro-video">
+            <video src="./videos/Vcoffee.mp4" autoplay muted loop playsinline></video>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cardapio" id="cardapio">
-    <div class="chamada">
-      <h2>CARDÁPIO</h2>
-      <p>Bebidas geladas, cafés clássicos, sobremesas e lanches preparados para acompanhar qualquer momento do dia.</p>
-      <a class="buttonC" href="cardapio.html">Cardápio completo</a>
-    </div>
+    <section class="cardapio" id="cardapio">
+      <div class="cardapio-chamada">
+        <h2>CARDÁPIO</h2>
+        <p>Bebidas geladas, cafés clássicos, sobremesas e lanches preparados para acompanhar qualquer momento do dia.</p>
+        <a class="botao-cardapio" href="cardapio.html">Cardápio completo</a>
+      </div>
 
-    <div class="carrossel-produtos" id="produtos" aria-label="Produtos do cardápio">
-      <button class="controle controle-anterior" type="button" aria-label="Produto anterior">&#8249;</button>
+      <div class="cardapio-carrossel" id="produtos" aria-label="Produtos do cardápio">
+        <button class="botao-carrossel botao-carrossel--anterior" type="button" aria-label="Produto anterior">
+          &#8249;
+        </button>
 
-      <div class="janela-carrossel" role="region" aria-label="Lista rolável de produtos" tabindex="0">
-        <div class="lista-produtos">
-          <article class="produto">
-            <img src="./Img/Matcha.png" alt="Matcha Latte">
-            <h3>Matcha Latte</h3>
-            <div class="etiquetas">
-              <span>gelado</span>
-              <span>vegetal</span>
-            </div>
-            <p>Matcha intenso batido com leite cremoso, gelo e finalização suave de baunilha.</p>
-            <span class="circulo" aria-hidden="true"></span>
-          </article>
+        <div class="carrossel-janela" role="region" aria-label="Lista rolável de produtos" tabindex="0">
+          <div class="lista-produtos">
+            <article class="produto">
+              <img src="./Img/Matcha.png" alt="Matcha Latte">
+              <h3>Matcha Latte</h3>
+              <div class="produto-etiquetas">
+                <span>gelado</span>
+                <span>vegetal</span>
+              </div>
+              <p>Matcha intenso batido com leite cremoso, gelo e finalização suave de baunilha.</p>
+              <a class="produto-botao" href="cardapio.html" aria-label="Ver Matcha Latte no cardápio">Ver cardápio</a>
+            </article>
 
-          <article class="produto">
-            <img src="./Img/Img/SanduicheN.jpg" alt="Sanduíche artesanal">
-            <h3>Sanduíche da Casa</h3>
-            <div class="etiquetas">
-              <span>quente</span>
-              <span>artesanal</span>
-            </div>
-            <p>Pão tostado, queijo derretido, folhas frescas e recheio temperado na hora.</p>
-            <span class="circulo" aria-hidden="true"></span>
-          </article>
+            <article class="produto">
+              <img src="./Img/Img/SanduicheN.jpg" alt="Sanduíche artesanal">
+              <h3>Sanduíche da Casa</h3>
+              <div class="produto-etiquetas">
+                <span>quente</span>
+                <span>artesanal</span>
+              </div>
+              <p>Pão tostado, queijo derretido, folhas frescas e recheio temperado na hora.</p>
+              <a class="produto-botao" href="cardapio.html" aria-label="Ver Sanduíche da Casa no cardápio">Ver cardápio</a>
+            </article>
 
-          <article class="produto">
-            <img src="./Img/Strawberry.png" alt="Bebida cremosa de morango">
-            <h3>Morango Cream</h3>
-            <div class="etiquetas">
-              <span>frutado</span>
-              <span>gelado</span>
-            </div>
-            <p>Leite gelado com calda de morango, espuma leve e pedaços da fruta.</p>
-            <span class="circulo" aria-hidden="true"></span>
-          </article>
+            <article class="produto">
+              <img src="./Img/Strawberry.png" alt="Bebida cremosa de morango">
+              <h3>Morango Cream</h3>
+              <div class="produto-etiquetas">
+                <span>frutado</span>
+                <span>gelado</span>
+              </div>
+              <p>Leite gelado com calda de morango, espuma leve e pedaços da fruta.</p>
+              <a class="produto-botao" href="cardapio.html" aria-label="Ver Morango Cream no cardápio">Ver cardápio</a>
+            </article>
 
-          <article class="produto">
-            <img src="./Img/RedVelvet.png" alt="Fatia de bolo red velvet">
-            <h3>Red Velvet</h3>
-            <div class="etiquetas">
-              <span>doce</span>
-              <span>cremoso</span>
-            </div>
-            <p>Massa macia de cacau, creme aveludado e cobertura delicada para acompanhar o café.</p>
-            <span class="circulo" aria-hidden="true"></span>
-          </article>
+            <article class="produto">
+              <img src="./Img/RedVelvet.png" alt="Fatia de bolo red velvet">
+              <h3>Red Velvet</h3>
+              <div class="produto-etiquetas">
+                <span>doce</span>
+                <span>cremoso</span>
+              </div>
+              <p>Massa macia de cacau, creme aveludado e cobertura delicada para acompanhar o café.</p>
+              <a class="produto-botao" href="cardapio.html" aria-label="Ver Red Velvet no cardápio">Ver cardápio</a>
+            </article>
 
-          <article class="produto">
-            <img src="./Img/Img/icedLatte.png" alt="Iced latte com gelo">
-            <h3>Iced Latte</h3>
-            <div class="etiquetas">
-              <span>espresso</span>
-              <span>gelado</span>
-            </div>
-            <p>Espresso encorpado com leite gelado, gelo cristalino e toque leve de caramelo.</p>
-            <span class="circulo" aria-hidden="true"></span>
-          </article>
+            <article class="produto">
+              <img src="./Img/Img/icedLatte.png" alt="Iced latte com gelo">
+              <h3>Iced Latte</h3>
+              <div class="produto-etiquetas">
+                <span>espresso</span>
+                <span>gelado</span>
+              </div>
+              <p>Espresso encorpado com leite gelado, gelo cristalino e toque leve de caramelo.</p>
+              <a class="produto-botao" href="cardapio.html" aria-label="Ver Iced Latte no cardápio">Ver cardápio</a>
+            </article>
 
-          <article class="produto">
-            <img src="./Img/Img/PãodeQueijo.png" alt="Pão de queijo">
-            <h3>Pão de Queijo</h3>
-            <div class="etiquetas">
-              <span>quentinho</span>
-              <span>sem glúten</span>
-            </div>
-            <p>Casquinha dourada, interior macio e sabor de queijo que combina com qualquer café.</p>
-            <span class="circulo" aria-hidden="true"></span>
-          </article>
+            <article class="produto">
+              <img src="./Img/Img/PãodeQueijo.png" alt="Pão de queijo">
+              <h3>Pão de Queijo</h3>
+              <div class="produto-etiquetas">
+                <span>quentinho</span>
+                <span>sem glúten</span>
+              </div>
+              <p>Casquinha dourada, interior macio e sabor de queijo que combina com qualquer café.</p>
+              <a class="produto-botao" href="cardapio.html" aria-label="Ver Pão de Queijo no cardápio">Ver cardápio</a>
+            </article>
 
-          <article class="produto">
-            <img src="./Img/torta de limão.png" alt="Torta de limão">
-            <h3>Torta de Limão</h3>
-            <div class="etiquetas">
-              <span>cítrico</span>
-              <span>doce</span>
-            </div>
-            <p>Base crocante, creme de limão equilibrado e cobertura leve para uma pausa fresca.</p>
-            <span class="circulo" aria-hidden="true"></span>
-          </article>
+            <article class="produto">
+              <img src="./Img/torta de limão.png" alt="Torta de limão">
+              <h3>Torta de Limão</h3>
+              <div class="produto-etiquetas">
+                <span>cítrico</span>
+                <span>doce</span>
+              </div>
+              <p>Base crocante, creme de limão equilibrado e cobertura leve para uma pausa fresca.</p>
+              <a class="produto-botao" href="cardapio.html" aria-label="Ver Torta de Limão no cardápio">Ver cardápio</a>
+            </article>
+          </div>
+        </div>
+
+        <button class="botao-carrossel botao-carrossel--proximo" type="button" aria-label="Próximo produto">
+          &#8250;
+        </button>
+
+        <div class="indicadores" role="group" aria-label="Navegação do carrossel"></div>
+      </div>
+    </section>
+
+    <section class="ingredientes" id="ingredientes">
+      <div class="ingredientes-imagem">
+        <img src="Img/fancycrave1-coffee-819362_1920.jpg" alt="Café quente preparado com ingredientes selecionados">
+      </div>
+
+      <div class="ingredientes-conteudo">
+        <h2>INGREDIENTES</h2>
+        <p>Trabalhamos com grãos arábica selecionados, torra equilibrada e moagem feita para preservar aroma, corpo e doçura natural em cada preparo.</p>
+        <p>Nossas bebidas combinam leite cremoso, frutas frescas, cacau, baunilha e caldas artesanais para entregar sabor marcante sem perder leveza.</p>
+      </div>
+    </section>
+
+    <section class="localizacao" id="lojas">
+      <div class="localizacao-cabecalho">
+        <span>São Paulo</span>
+        <h2>Onde estamos</h2>
+        <p>Nosso ponto de referência fica no Senac Lapa Tito, na Vila Romana.</p>
+      </div>
+
+      <div class="localizacao-conteudo">
+        <article class="cartao-localizacao">
+          <div class="cartao-localizacao-conteudo">
+            <span class="localizacao-bairro">Vila Romana</span>
+            <h3>Senac Lapa Tito</h3>
+            <p>Rua Tito, 54 - Vila Romana</p>
+            <p>São Paulo - SP, 05051-000</p>
+            <strong>Referência: estação Água Branca</strong>
+            <a class="botao-rota" href="https://www.google.com/maps/search/?api=1&amp;query=Senac%20Lapa%20Tito%20Rua%20Tito%2054%20Sao%20Paulo" target="_blank" rel="noopener">Abrir rota</a>
+          </div>
+        </article>
+
+        <div class="mapa-localizacao">
+          <div class="mapa-quadro">
+            <iframe
+              title="Mapa do Google Maps para o Senac Lapa Tito"
+              src="https://www.google.com/maps?q=Senac%20Lapa%20Tito%2C%20Rua%20Tito%2054%2C%20Vila%20Romana%2C%20Sao%20Paulo%20SP&amp;output=embed"
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="mapa-legenda">
+            <strong>Senac Lapa Tito</strong>
+            <span>Rua Tito, 54 - Vila Romana, São Paulo - SP</span>
+          </div>
         </div>
       </div>
-
-      <button class="controle controle-proximo" type="button" aria-label="Próximo produto">&#8250;</button>
-
-      <div class="indicadores" role="group" aria-label="Navegação do carrossel"></div>
-    </div>
-  </section>
-
-  <section class="ingredientes" id="ingredientes">
-    <div class="ingredientes__imagem">
-      <img src="Img/fancycrave1-coffee-819362_1920.jpg" alt="Café quente preparado com ingredientes selecionados">
-    </div>
-
-    <div class="ingredientes__conteudo">
-      <h2>INGREDIENTES</h2>
-      <p>Trabalhamos com grãos arábica selecionados, torra equilibrada e moagem feita para preservar aroma, corpo e doçura natural em cada preparo.</p>
-      <p>Nossas bebidas combinam leite cremoso, frutas frescas, cacau, baunilha e caldas artesanais para entregar sabor marcante sem perder leveza.</p>
-    </div>
-  </section>
-
-  <section class="lojas-fisicas" id="lojas">
-    <div class="lojas-cabecalho">
-      <span>São Paulo</span>
-      <h2>Lojas físicas</h2>
-      <p>Encontre uma unidade Incoffe para retirar seu pedido ou aproveitar uma pausa com café fresco.</p>
-    </div>
-
-    <div class="carousel-wrapper" role="region" aria-label="Carrossel de lojas físicas em São Paulo">
-      <button class="carousel-btn prev" id="prevBtn" type="button" aria-label="Loja anterior">&#8592;</button>
-
-      <div class="carousel-track-container">
-        <div class="carousel-track" id="track">
-          <article class="loja-card">
-            <img src="Img/Endereço1.jpeg" alt="Fachada da loja Incoffe Oscar Freire">
-            <div class="loja-card__conteudo">
-              <span class="loja-card__bairro">Pinheiros</span>
-              <h3>Incoffe Oscar Freire</h3>
-              <p>R. Oscar Freire, 2.250 - Piso Café</p>
-              <p>Seg a sex: 7h às 19h</p>
-              <strong>(11) 3898-4740</strong>
-            </div>
-          </article>
-
-          <article class="loja-card">
-            <img src="Img/Endereço2.jpeg" alt="Ambiente da loja Incoffe Bela Vista">
-            <div class="loja-card__conteudo">
-              <span class="loja-card__bairro">Bela Vista</span>
-              <h3>Incoffe Bela Vista</h3>
-              <p>R. Dona Adma Jafet, 74</p>
-              <p>Seg a sex: 8h às 20h, sáb: 8h às 16h</p>
-              <strong>(11) 2894-2485</strong>
-            </div>
-          </article>
-
-          <article class="loja-card">
-            <img src="Img/Endereço3.jpeg" alt="Mesa de atendimento da loja Incoffe Vila Olímpia">
-            <div class="loja-card__conteudo">
-              <span class="loja-card__bairro">Vila Olímpia</span>
-              <h3>Incoffe Vila Olímpia</h3>
-              <p>R. Dr. Cardoso de Melo, 878</p>
-              <p>Seg a sex: 7h às 18h30</p>
-              <strong>(11) 3055-1820</strong>
-            </div>
-          </article>
-
-          <article class="loja-card">
-            <img src="Img/endereço4.png" alt="Interior da loja Incoffe Itaim Bibi">
-            <div class="loja-card__conteudo">
-              <span class="loja-card__bairro">Itaim Bibi</span>
-              <h3>Incoffe Itaim Bibi</h3>
-              <p>R. João Cachoeira, 1200</p>
-              <p>Seg a sex: 7h às 19h, sáb: 9h às 14h</p>
-              <strong>(11) 3345-6789</strong>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <button class="carousel-btn next" id="nextBtn" type="button" aria-label="Próxima loja">&#8594;</button>
-
-      <div class="dots" id="dots" role="group" aria-label="Navegação das lojas"></div>
-    </div>
-
-    <div class="mapa-lojas">
-      <div class="mapa-lojas__quadro">
-        <iframe
-          title="Mapa das lojas físicas Incoffe em São Paulo"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-46.7152%2C-23.6187%2C-46.5938%2C-23.5044&amp;layer=mapnik&amp;marker=-23.5614%2C-46.6559"
-          loading="lazy">
-        </iframe>
-        <div class="mapa-lojas__overlay" aria-hidden="true">
-          <span class="mapa-rua mapa-rua--principal"></span>
-          <span class="mapa-rua mapa-rua--diagonal"></span>
-          <span class="mapa-rua mapa-rua--vertical"></span>
-          <span class="mapa-rua mapa-rua--curta"></span>
-          <span class="mapa-pin mapa-pin--pinheiros"></span>
-          <span class="mapa-pin mapa-pin--bela"></span>
-          <span class="mapa-pin mapa-pin--vila"></span>
-          <span class="mapa-pin mapa-pin--itaim"></span>
-          <span class="mapa-bairro mapa-bairro--pinheiros">Pinheiros</span>
-          <span class="mapa-bairro mapa-bairro--bela">Bela Vista</span>
-          <span class="mapa-bairro mapa-bairro--vila">Vila Olímpia</span>
-          <span class="mapa-bairro mapa-bairro--itaim">Itaim Bibi</span>
-        </div>
-      </div>
-      <div class="mapa-lojas__legenda">
-        <strong>Região de atendimento</strong>
-        <span>Pinheiros, Bela Vista, Vila Olímpia e Itaim Bibi</span>
-      </div>
-    </div>
-  </section>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+      <div class="rodape-marca">
         <h2>INCOFFE</h2>
-        <p>
-          Um café especial para todos os momentos.
-          Sabor, qualidade e aconchego em um só lugar.
-        </p>
+        <p>Um café especial para todos os momentos. Sabor, qualidade e aconchego em um só lugar.</p>
       </div>
 
-      <div class="footer-links">
+      <div class="rodape-links">
         <h3>Links</h3>
         <a href="index.html">Início</a>
         <a href="sobrenos.html">Sobre Nós</a>
         <a href="cardapio.html">Cardápio</a>
-        <a href="#products">Produtos</a>
+        <a href="#cardapio">Produtos</a>
       </div>
 
-      <div class="footer-contato">
+      <div class="rodape-contato">
         <h3>Contato</h3>
         <p>📍 São Paulo - SP</p>
         <p>📞 (11) 99999-9999</p>
         <p>✉️ contato@incoffe.com</p>
       </div>
 
-      <div class="footer-social">
+      <div class="rodape-social">
         <h3>Siga a InCoffe</h3>
-        <div class="social-icons">
+        <div class="icones-sociais">
           <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
@@ -332,7 +261,7 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="rodape-base">
       <p>© 2026 InCoffe. Todos os direitos reservados.</p>
     </div>
   </footer>
