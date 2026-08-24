@@ -145,4 +145,29 @@ document.addEventListener('DOMContentLoaded', () => {
       botaoMobile.setAttribute('aria-expanded', 'false');
     }
   });
+
+
+    ScrollReveal().reveal('.hero', {
+        origin: 'left',
+        duration: 4000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('#processo', {
+        origin: 'right',
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('#testimonial_chef', {
+        origin: 'left',
+        duration: 1000,
+        distance: '20%'
+    })
+
+    ScrollReveal().reveal('.feedback', {
+        origin: 'right',
+        duration: 1000,
+        distance: '20%'
+    })
 });
