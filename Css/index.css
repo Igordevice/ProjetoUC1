@@ -538,12 +538,14 @@ button:focus-visible,
 }
 
 .ingredientes-conteudo h2 {
-  margin-bottom: 30px;
+  max-width: 100%;
+  margin-bottom: 26px;
   color: var(--creme);
   font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
-  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-size: clamp(2.45rem, 5vw, 3.6rem);
   font-weight: 900;
   line-height: 1;
+  text-align: left;
 }
 
 .ingredientes-conteudo p {
