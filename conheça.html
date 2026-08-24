@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Incoffee</title>
-  <link>
-    <link rel="stylesheet" href="Css/conheça.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="Css/conheça.css">
+  <link rel="stylesheet" href="Css/navbar.css" type="text/css">
 </head>
 
 <body>
@@ -14,13 +17,31 @@
   <div class="bg-glow"></div>
 
   <header>
-    <div class="logo">
-      <a href="index.html">INCOFFEE</a></div>
-    <nav>
-      <a href="#" class="active">Início</a>
-      <a href="cardapio.html">Cardápio</a>
-      <a href="#processo">Processo</a>
+    <nav id="barra-navegacao" aria-label="Menu principal">
+      <i id="logo-navegacao">Incoffee</i>
+
+      <ul id="lista-navegacao">
+        <li class="item-navegacao"><a href="index.html#inicio">Início</a></li>
+        <li class="item-navegacao"><a href="cardapio.html">Cardápio</a></li>
+        <li class="item-navegacao ativo"><a href="conheça.html">Conheça seu café</a></li>
+        <li class="item-navegacao"><a href="sobrenos.html">sobre-nós</a></li>
+        <li class="item-navegacao"><a href="avaliacion.html">Avaliações</a></li>
+      </ul>
+
+      <button id="botao-mobile" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
+
+    <div id="menu-mobile">
+      <ul id="lista-mobile">
+        <li class="item-navegacao"><a href="index.html#inicio">Início</a></li>
+        <li class="item-navegacao"><a href="cardapio.html">Cardápio</a></li>
+        <li class="item-navegacao"><a href="avaliacion.html">Avaliações</a></li>
+      </ul>
+
+      <a class="botao-padrao" href="cardapio.html">Peça aqui</a>
+    </div>
   </header>
 
   <section class="hero">
@@ -124,6 +145,7 @@
     </div>
   </footer>
 
+  <script src="navbar.js"></script>
   <script src="conheça.js"></script>
   <script src="acessibilidade.js"></script>
 

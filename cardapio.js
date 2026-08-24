@@ -1,32 +1,7 @@
-const botaoMobile = document.querySelector('#botao-mobile');
-const menuMobile = document.querySelector('#menu-mobile');
-const iconeMobile = botaoMobile?.querySelector('i');
-const barraNavegacao = document.querySelector('#barra-navegacao');
 const formularioPesquisa = document.querySelector('.barra-pesquisa');
 const campoPesquisa = document.querySelector('.input-pesquisa');
 const produtos = Array.from(document.querySelectorAll('.produto-card'));
 const mensagemSemProduto = document.querySelector('.mensagem-sem-produto');
-
-botaoMobile?.addEventListener('click', () => {
-  const menuAberto = menuMobile?.classList.toggle('ativo') ?? false;
-
-  botaoMobile.setAttribute('aria-expanded', String(menuAberto));
-  iconeMobile?.classList.toggle('fa-bars', !menuAberto);
-  iconeMobile?.classList.toggle('fa-xmark', menuAberto);
-});
-
-menuMobile?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    menuMobile.classList.remove('ativo');
-    botaoMobile?.setAttribute('aria-expanded', 'false');
-    iconeMobile?.classList.add('fa-bars');
-    iconeMobile?.classList.remove('fa-xmark');
-  });
-});
-
-window.addEventListener('scroll', () => {
-  barraNavegacao?.classList.toggle('com-sombra', window.scrollY > 8);
-}, { passive: true });
 
 formularioPesquisa?.addEventListener('submit', (evento) => {
   evento.preventDefault();

@@ -1,208 +1,11 @@
 * {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-:root {
-    --color-primary-1: #fff9ea;
-    --color-primary-2: #ffe8b4;
-    --color-primary-3: #7a6248;
-    --color-primary-4: #7a6248;
-    --color-primary-5: #7a6248;
-    --color-primary-6: #7a6248;
-
-    --color-neutral-0: #fff;
-    --color-neutral-1: #1d1d1d;
-}
-
-Body{
-
-    background-color:#fff9ea; ;
-}
-header {
-    width: 100%;
-    padding: 22px 4% 14px;
-    position: sticky;
-    top: 0;
-    background-color: var(--color-primary-1);
-    z-index: 3;
-}
-
-#navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-    z-index: 2;
-    position: relative;
-    padding-left: 4px;
-}
-
-#navbar::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -12px;
-    height: 6px;
-    background: linear-gradient(90deg, rgba(61, 38, 25, 0.9) 0%, rgba(91, 67, 49, 0.65) 25%, rgba(139, 104, 76, 0.3) 58%, rgba(217, 177, 118, 0.08) 100%);
-    border-radius: 999px;
-    filter: blur(1px);
-    opacity: 0.9;
-}
-
-#ButtonNav {
-    font-family: Georgia, bold;
-    margin-left: 0;
-    height: 40px;
-    border: none;
-    background: #5b4331;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 0 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(59, 36, 24, 0.12);
-}
-
-#ButtonNav a {
-    background: transparent;
-    text-decoration: none;
-    color: #fdfcfb;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#ButtonNav :hover
-{
-  transition: transform 0.3s ease;
-    
-}
-
-
-#nav_logo {
-    font-size: 24px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--color-primary-6);
-}
-
-#nav_list {
-    display: flex;
-    list-style: none;
-    gap: 48px;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: #1d1d1dad;
-    font-weight: 600;
-}
-
-.nav-item.active a {
-    color: var(--color-neutral-1);
-    border-bottom: 3px solid var(--color-primary-4);
-}
-
-/* SteelBlue */
-#enviar {
-    padding: 5px 50px;
-    border-radius: 5px;
-    background-color: SteelBlue;
-    color: white;
-    display: block;
-    margin: 0 auto;
-}
-
-#enviar:hover {
-    background-color: white;
-    color: SteelBlue;
-    border-color: SteelBlue;
-}
-
-#formulario {
-    /*     background: #ccc; */
-    padding: 50px;
-}
-
-#titulo {
-    width: 50%;
-    border-radius: 5px;
-    background: rgba(156, 149, 149, 0.3);
-    border-style: none;
-    padding: 5px;
-    /*     color: white; */
-}
-
-#testemunho {
-    width: 50%;
-    height: 500px;
-    border-radius: 5px;
-    background: rgba(156, 149, 149, 0.3);
-    border-style: none;
-    padding: 5px;
-}
-.box{
-    position: relative;
-    float:left;
-    width:10%;
-    height: auto;
-    background: rgb(255, 255, 255);
-
-}
-
-
-
-
-
-
-
-.linha-testemunho {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 12px;
-}
-
-.linha-testemunho label {
-    margin: 0;
-}
-
-.comentarios-panel {
-    position: fixed;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    z-index: 20;
-}
-
-.comentario-aba {
-    border: none;
-    background: linear-gradient(180deg, #7a6248, #5a4230);
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.95rem;
-    padding: 10px 18px;
-    border-radius: 12px;
-    cursor: pointer;
-    letter-spacing: 0.03em;
-    box-shadow: 0 10px 24px rgba(90, 66, 48, 0.28);
-    writing-mode: horizontal-tb;
-    transform: none;
-}
-
 #comentariosPopout {
-    
     position: fixed;
     right: 24px;
     top: 18%;
@@ -271,47 +74,6 @@ header {
     font-size: 0.97rem;
 }
 
-#mobile_btn {
-    display: none;
-}
-
-#mobile_menu {
-    display: none;
-}
-
-@media screen and (max-width: 1170px) {
-    #nav_list,
-    #navbar .btn-default {
-        display: none;
-    }
-
-    #mobile_btn {
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    #mobile_menu.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #mobile_nav_list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 0px;
-    }
-
-    #mobile_nav_list .nav-item {
-        list-style: none;
-        text-align: center;
-    } 
-}
-
 /* Identidade visual da página de avaliações */
 :root {
     --marrom: #873214;
@@ -334,71 +96,6 @@ body {
     color: var(--texto);
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.6;
-}
-
-header {
-    position: fixed;
-    inset: 0 0 auto;
-    padding: 1.5rem 2rem;
-    background: var(--marrom);
-    box-shadow: 0 4px 18px rgba(63, 27, 12, 0.16);
-}
-
-#navbar {
-    max-width: 1240px;
-    height: 32px;
-    margin: 0 auto;
-    padding: 0;
-}
-
-#navbar::after {
-    display: none;
-}
-
-#ButtonNav {
-    height: 36px;
-    margin: 0;
-    padding: 0 14px;
-    border: 1px solid rgba(255, 250, 244, 0.35);
-    border-radius: 6px;
-    background: transparent;
-    box-shadow: none;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 0.95rem;
-}
-
-#ButtonNav a,
-#nav_logo,
-.nav-item a {
-    color: var(--creme);
-}
-
-#nav_logo {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-#nav_list {
-    gap: 2rem;
-    font-family: Arial, sans-serif;
-    font-size: 0.85rem;
-}
-
-.nav-item a {
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-item a:hover,
-.nav-item.active a {
-    color: #fff;
-}
-
-.nav-item.active a {
-    border-bottom-color: var(--caramelo);
 }
 
 #conteudo-principal {
@@ -489,6 +186,10 @@ legend {
 }
 
 .linha-testemunho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     margin-bottom: 0.5rem;
 }
 
@@ -505,7 +206,10 @@ legend {
     color: var(--rosa);
     box-shadow: none;
     font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 fieldset {
