@@ -5,11 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Incoffee</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="Css/conheça.css">
-  <link rel="stylesheet" href="Css/navbar.css" type="text/css">
+  <link>
+    <link rel="stylesheet" href="Css/conheça.css">
 </head>
 
 <body>
@@ -17,31 +14,13 @@
   <div class="bg-glow"></div>
 
   <header>
-    <nav id="barra-navegacao" aria-label="Menu principal">
-      <i id="logo-navegacao">Incoffee</i>
-
-      <ul id="lista-navegacao">
-        <li class="item-navegacao"><a href="index.html#inicio">Início</a></li>
-        <li class="item-navegacao"><a href="cardapio.html">Cardápio</a></li>
-        <li class="item-navegacao ativo"><a href="conheça.html">Conheça seu café</a></li>
-        <li class="item-navegacao"><a href="sobrenos.html">sobre-nós</a></li>
-        <li class="item-navegacao"><a href="avaliacion.html">Avaliações</a></li>
-      </ul>
-
-      <button id="botao-mobile" type="button" aria-label="Abrir menu" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+    <div class="logo">
+      <a href="index.html">INCOFFEE</a></div>
+    <nav>
+      <a href="#" class="active">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="#processo">Processo</a>
     </nav>
-
-    <div id="menu-mobile">
-      <ul id="lista-mobile">
-        <li class="item-navegacao"><a href="index.html#inicio">Início</a></li>
-        <li class="item-navegacao"><a href="cardapio.html">Cardápio</a></li>
-        <li class="item-navegacao"><a href="avaliacion.html">Avaliações</a></li>
-      </ul>
-
-      <a class="botao-padrao" href="cardapio.html">Peça aqui</a>
-    </div>
   </header>
 
   <section class="hero">
@@ -51,7 +30,9 @@
       <p>Um espresso é só o começo. Gire a roda e descubra como um único grão vira quatorze bebidas diferentes — cada
         uma com sua proporção, textura e ritual.</p>
       <div class="hero-actions">
+        <a href="cardapio.html">
         <button class="btn-primary">Ver cardápio completo</button>
+        </a>
         <a href="#processo" class="btn-text">Conhecer a torra ↓</a>
       </div>
       <div class="hero-stats">
@@ -113,35 +94,41 @@
     </div>
   </section>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">Incoffee</div>
-        <p>Café de origem única, torrado em pequenos lotes e servido com cuidado — todos os dias, na sua esquina.</p>
+ <footer class="rodape">
+    <div class="rodape-conteudo">
+      <div class="rodape-marca">
+        <h2>INCOFFE</h2>
+        <p>Um café especial para todos os momentos. Sabor, qualidade e aconchego em um só lugar.</p>
       </div>
-      <div class="footer-col">
-        <h5>Visite</h5>
-        <p>Rua dos Grãos, 128<br>São Paulo, SP</p>
-        <p>Seg–Sáb · 7h às 19h</p>
+
+      <div class="rodape-links">
+        <h3>Links</h3>
+        <a href="index.html">Início</a>
+        <a href="sobrenos.html">Sobre Nós</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="#cardapio">Produtos</a>
       </div>
-      <div class="footer-col">
-        <h5>Menu</h5>
-        <a href="#menu">Cardápio completo</a>
-        <a href="#processo">Nosso processo</a>
-        <a href="#">Assinatura de grãos</a>
+
+      <div class="rodape-contato">
+        <h3>Contato</h3>
+        <p>📍 São Paulo - SP</p>
+        <p>📞 (11) 99999-9999</p>
+        <p>✉️ contato@incoffe.com</p>
       </div>
-      <div class="footer-col">
-        <h5>Fique por dentro</h5>
-        <p style="margin-bottom:10px;">Novidades de safra e torra, direto no seu e-mail.</p>
-        <div class="newsletter">
-          <input type="email" placeholder="seu e-mail">
-          <button>Enviar</button>
+
+      <div class="rodape-social">
+        <h3>Siga a InCoffe</h3>
+        <div class="icones-sociais">
+          <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Incoffee</span>
-      <span>Instagram · WhatsApp · Google Maps</span>
+
+    <div class="rodape-base">
+      <p>© 2026 InCoffe. Todos os direitos reservados.</p>
     </div>
   </footer>
 
