@@ -22,14 +22,14 @@ options.forEach((option) => {
 const drinks = [
   { name:"Espresso",    sub:"1 dose concentrada",        water:0,  milk:0,  espresso:38, crema:true },
   { name:"Doppio",      sub:"2 doses concentradas",       water:0,  milk:0,  espresso:60, crema:true },
-  { name:"Cortado",     sub:"espresso · leite em partes iguais", water:0, milk:40, espresso:40, crema:false },
-  { name:"Macchiato",   sub:"espresso · toque de leite",  water:0,  milk:12, espresso:42, crema:true },
+  { name:"Cortado",     sub:"espresso · leite em partes", water:0, milk:40, espresso:40, crema:false },
+  { name:"Macchiato",   sub:"espresso · toque de leite",  water:0,  milk:80, espresso:52, crema:false },
   { name:"Cappuccino",  sub:"espresso · leite · espuma",  water:0,  milk:55, espresso:35, crema:false },
   { name:"Latte",       sub:"espresso · bastante leite",  water:0,  milk:70, espresso:28, crema:false },
   { name:"Flat White",  sub:"dose dupla · leite cremoso", water:0,  milk:50, espresso:45, crema:false },
   { name:"Black",       sub:"café coado, sem leite",      water:0, milk:0,  espresso:70,  crema:false },
   { name:"Café ao leite",sub:"café coado · leite quente", water:0, milk:80, espresso:20,  crema:false },
-  { name:"Irish",       sub:"café · whisky · creme",      water:45, milk:15, espresso:20, crema:false },
+  { name:"Irish",       sub:"café · whisky · creme",      water:0,   milk:15, espresso:20, crema:true },
   { name:"Con Panna",   sub:"espresso · chantilly",       water:0,  milk:0,  espresso:40, crema:true },
   { name:"Affogato",    sub:"espresso sobre sorvete",     water:0,  milk:20, espresso:35, crema:true },
   { name:"Mocha",       sub:"espresso · chocolate · leite",water:0, milk:45, espresso:35, crema:false },
@@ -113,4 +113,36 @@ window.addEventListener('resize', () => {
     t.style.transform = `rotate(${(i/N)*360}deg) translate(0, ${radius*0.93}px)`;
   });
   layout();
+});
+
+// Toggle do menu mobile — adicione este código ao seu conheça.js
+// (ou inclua este arquivo com <script src="menu-mobile.js"></script> antes do fechamento do </body>)
+
+document.addEventListener('DOMContentLoaded', () => {
+  const botaoMobile = document.getElementById('botao-mobile');
+  const menuMobile = document.getElementById('menu-mobile');
+
+  if (!botaoMobile || !menuMobile) return;
+
+  botaoMobile.addEventListener('click', () => {
+    const abrindo = !menuMobile.classList.contains('aberto');
+    menuMobile.classList.toggle('aberto');
+    botaoMobile.setAttribute('aria-expanded', String(abrindo));
+  });
+
+  // fecha o menu ao clicar em qualquer link dele
+  menuMobile.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuMobile.classList.remove('aberto');
+      botaoMobile.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // fecha o menu com a tecla Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuMobile.classList.contains('aberto')) {
+      menuMobile.classList.remove('aberto');
+      botaoMobile.setAttribute('aria-expanded', 'false');
+    }
+  });
 });
