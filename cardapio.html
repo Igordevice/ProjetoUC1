@@ -24,7 +24,8 @@
         <li class="item-navegacao ativo"><a href="#cardapio">Cardápio</a></li>
         <li class="item-navegacao"><a href="conheça.html">Conheça seu café</a></li>
         <li class="item-navegacao"><a href="sobrenos.html">sobre-nós</a></li>
-        <li class="item-navegacao"><a href="index.html#testimonials">Avaliações</a></li>
+        <li class="item-navegacao"><a href="avaliacion.html">Avaliações</a></li>
+        <a href="carrinho.html" class="carrinho-link">🛒 Carrinho</a>
       </ul>
 
       <button id="botao-mobile" type="button" aria-label="Abrir menu" aria-expanded="false">
@@ -90,8 +91,10 @@
           <p class="produto-descricao">Ingredientes: café espresso e água filtrada.</p>
           <div class="produto-compra">
             <strong>R$8,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Expresso ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Expresso', 8.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -106,8 +109,10 @@
           <p class="produto-descricao">Ingredientes: café espresso, leite vaporizado e espuma.</p>
           <div class="produto-compra">
             <strong>R$10,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Café com Leite ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+           <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Café com Leite', 10.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -122,8 +127,10 @@
           <p class="produto-descricao">Ingredientes: espresso, leite, gelo e caramelo.</p>
           <div class="produto-compra">
             <strong>R$20,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Iced Latte ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Iced Latte', 20.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -138,8 +145,10 @@
           <p class="produto-descricao">Ingredientes: chocolate, leite, chantilly e cacau.</p>
           <div class="produto-compra">
             <strong>R$14,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Achocolatado ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Achocolatado', 14.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -154,8 +163,10 @@
           <p class="produto-descricao">Ingredientes: café, leite sem lactose, gelo e creme.</p>
           <div class="produto-compra">
             <strong>R$20,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Frapuccino Cremoso ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Frapuccino Cremoso', 20.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -170,8 +181,10 @@
           <p class="produto-descricao">Ingredientes: café, leite, cacau e creme.</p>
           <div class="produto-compra">
             <strong>R$15,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Café Sem Glúten ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Café Sem Glúten', 15.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -186,8 +199,10 @@
           <p class="produto-descricao">Ingredientes: matcha, leite vegetal, gelo e baunilha.</p>
           <div class="produto-compra">
             <strong>R$20,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Matcha Latte ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Matcha Latte', 20.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -202,8 +217,10 @@
           <p class="produto-descricao">Ingredientes: leite, morango, calda de morango e gelo.</p>
           <div class="produto-compra">
             <strong>R$20,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Morango Cream ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Morango Cream', 20.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -218,8 +235,10 @@
           <p class="produto-descricao">Ingredientes: blueberry, leite, creme e gelo.</p>
           <div class="produto-compra">
             <strong>R$20,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Milkshake de Blueberry ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Milkshake de Blueberry', 20.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -234,8 +253,10 @@
           <p class="produto-descricao">Ingredientes: leite, creme, biscoito Oreo e gelo.</p>
           <div class="produto-compra">
             <strong>R$18,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Milkshake de Oreo ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+           <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Milkshake de Oreo', 18.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -249,8 +270,10 @@
           <p class="produto-descricao">Ingredientes: kiwi, água, gelo e hortelã.</p>
           <div class="produto-compra">
             <strong>R$14,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Suco de Kiwi ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Suco de Kiwi', 14.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -264,8 +287,10 @@
           <p class="produto-descricao">Ingredientes: água com gás, limão, gelo e açúcar.</p>
           <div class="produto-compra">
             <strong>R$13,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Soda Limonada ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Soda Limonada', 13.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -279,8 +304,10 @@
           <p class="produto-descricao">Ingredientes: limão, morango, hortelã e gelo.</p>
           <div class="produto-compra">
             <strong>R$15,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Limonada com Morango ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Limonada com Morango', 15.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -294,8 +321,10 @@
           <p class="produto-descricao">Ingredientes: goiaba, água, gelo e açúcar.</p>
           <div class="produto-compra">
             <strong>R$14,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Suco de Goiaba ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Suco de Goiaba', 14.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -309,8 +338,10 @@
           <p class="produto-descricao">Ingredientes: chá preto, pêssego, gelo e hortelã.</p>
           <div class="produto-compra">
             <strong>R$14,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Chá de Pêssego ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Chá de Pêssego', 14.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -324,8 +355,10 @@
           <p class="produto-descricao">Ingredientes: água com gás, uva verde, gelo e limão.</p>
           <div class="produto-compra">
             <strong>R$13,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Soda de Uva ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Soda de Uva', 13.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -339,8 +372,10 @@
           <p class="produto-descricao">Ingredientes: blueberry, água, gelo e hortelã.</p>
           <div class="produto-compra">
             <strong>R$15,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Suco de Blueberry ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Suco de Blueberry', 15.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -356,8 +391,10 @@
           <p class="produto-descricao">Ingredientes: pão, queijo, folhas e molho da casa.</p>
           <div class="produto-compra">
             <strong>R$24,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Sanduíche da Casa ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Sanduíche da Casa', 24.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -372,8 +409,10 @@
           <p class="produto-descricao">Ingredientes: polvilho, queijo, ovos e leite.</p>
           <div class="produto-compra">
             <strong>R$10,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Pão de Queijo ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+           <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Pão de Queijo', 10.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -388,8 +427,10 @@
           <p class="produto-descricao">Ingredientes: farinha integral, sementes, água e fermento.</p>
           <div class="produto-compra">
             <strong>R$12,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Pão Integral ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Pão Integral', 12.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -404,8 +445,10 @@
           <p class="produto-descricao">Ingredientes: farinha, gergelim, água e fermento.</p>
           <div class="produto-compra">
             <strong>R$8,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Pão ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+           <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Pão', 8.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -420,8 +463,10 @@
           <p class="produto-descricao">Ingredientes: pão, queijo, manteiga e sal.</p>
           <div class="produto-compra">
             <strong>R$16,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Queijo Quente ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Queijo Quente', 16.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -436,8 +481,10 @@
           <p class="produto-descricao">Ingredientes: massa de batata, jaca, farinha e temperos.</p>
           <div class="produto-compra">
             <strong>R$12,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Coxinha Vegana ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Coxinha Vegana', 12.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -451,8 +498,10 @@
           <p class="produto-descricao">Ingredientes: cacau, cream cheese, baunilha e farinha.</p>
           <div class="produto-compra">
             <strong>R$18,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Red Velvet ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Red Velvet', 18.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -467,8 +516,10 @@
           <p class="produto-descricao">Ingredientes: limão, creme, merengue e base crocante.</p>
           <div class="produto-compra">
             <strong>R$16,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Torta de Limão ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+      <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Torta de Limão', 16.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -483,8 +534,10 @@
           <p class="produto-descricao">Ingredientes: cream cheese, morango, biscoito e manteiga.</p>
           <div class="produto-compra">
             <strong>R$19,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Cheesecake de Morango ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Cheesecake de Morango', 19.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -500,8 +553,10 @@
           <p class="produto-descricao">Ingredientes: maçã, canela, massa folhada e açúcar.</p>
           <div class="produto-compra">
             <strong>R$17,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Torta de Maçã ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+           <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Torta de Maçã', 17.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -516,8 +571,10 @@
           <p class="produto-descricao">Ingredientes: cacau, farinha, chocolate e creme.</p>
           <div class="produto-compra">
             <strong>R$18,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Bolo de Chocolate ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Bolo de Chocolate', 18.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -532,8 +589,10 @@
           <p class="produto-descricao">Ingredientes: banana, doce de leite, creme e base crocante.</p>
           <div class="produto-compra">
             <strong>R$18,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Banoffe ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+           <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Banoffe', 18.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -548,8 +607,10 @@
           <p class="produto-descricao">Ingredientes: banana, castanhas, massa doce e calda.</p>
           <div class="produto-compra">
             <strong>R$13,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Donut de Banana e Castanhas ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+           <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Donut de Banana e Castanhas', 13.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -564,8 +625,10 @@
           <p class="produto-descricao">Ingredientes: chocolate, avelã, marshmallow e cacau.</p>
           <div class="produto-compra">
             <strong>R$11,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Cookie de Avelã ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Cookie de Avelã', 11.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -580,8 +643,10 @@
           <p class="produto-descricao">Ingredientes: cacau, chocolate, farinha vegetal e açúcar mascavo.</p>
           <div class="produto-compra">
             <strong>R$14,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Brownie Vegano ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+          <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Brownie Vegano', 14.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -596,8 +661,10 @@
           <p class="produto-descricao">Ingredientes: morango, creme, massa doce e cobertura rosa.</p>
           <div class="produto-compra">
             <strong>R$13,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Donut de Morango ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Donut de Morango', 13.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -611,8 +678,10 @@
           <p class="produto-descricao">Ingredientes: café, cacau, creme e biscoito.</p>
           <div class="produto-compra">
             <strong>R$17,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Tiramissu ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+           <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Tiramissu', 17.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -628,8 +697,10 @@
           <p class="produto-descricao">Ingredientes: massa de crepe, amora, mel e creme.</p>
           <div class="produto-compra">
             <strong>R$16,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Crepe de Amora ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Crepe de Amora', 16.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -644,8 +715,10 @@
           <p class="produto-descricao">Ingredientes: coco, creme, farinha e leite.</p>
           <div class="produto-compra">
             <strong>R$12,00</strong>
-            <button class="produto-botao" type="button" aria-label="Adicionar Pão de Coco ao pedido">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <button
+          class="btn-carrinho"
+          onclick="adicionarCarrinho('Pão de Coco', 12.00)">
+         🛒
             </button>
           </div>
         </article>
@@ -754,6 +827,7 @@
 
   <script src="cardapio.js"></script>
   <script src="acessibilidade.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5eee7;
+    color: #3d2417;
+}
+
+.cabecalho {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background-color: #5a321f;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: #fff8f1;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.voltar {
+    color: #fff8f1;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid #d9b99b;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    background-color: #d9b99b;
+    color: #3d2417;
+}
+
+.carrinho-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.carrinho-container h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.lista-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fffaf5;
+    border: 1px solid #e2cdbb;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(61, 36, 23, 0.08);
+}
+
+.produto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.produto-nome {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.produto-preco {
+    color: #795139;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantidade button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: #8a5a3c;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantidade span {
+    font-weight: bold;
+}
+
+.resumo {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ead8c8;
+    border-radius: 15px;
+}
+
+.resumo h2 {
+    margin-bottom: 20px;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #c9ab93;
+}
+
+.total {
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.btn-pagar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5a321f;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-pagar:hover {
+    background-color: #7b4a2f;
+    transform: translateY(-2px);
+}
+
+.carrinho-vazio {
+    padding: 50px;
+    text-align: center;
+    background-color: #fffaf5;
+    border-radius: 15px;
+    color: #795139;
+}
+
+.pagamento {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(45, 25, 15, 0.7);
+}
+
+.pagamento.ativo {
+    display: flex;
+}
+
+.pagamento-box {
+    position: relative;
+    width: 400px;
+    padding: 35px;
+    text-align: center;
+    background-color: #fffaf5;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pagamento-box h2 {
+    margin-bottom: 15px;
+}
+
+.pagamento-box p {
+    margin-bottom: 20px;
+    color: #795139;
+}
+
+.qrcode {
+    width: 220px;
+    height: 220px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 15px solid white;
+    outline: 5px solid #3d2417;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: 
+        linear-gradient(45deg, #3d2417 25%, transparent 25%),
+        linear-gradient(-45deg, #3d2417 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #3d2417 75%),
+        linear-gradient(-45deg, transparent 75%, #3d2417 75%);
+    background-size: 30px 30px;
+    color: transparent;
+}
+
+.pix {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 20px;
+    background-color: #d9b99b;
+    color: #3d2417;
+    font-weight: bold;
+}
+
+.aviso {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: none;
+    background: none;
+    color: #5a321f;
+    font-size: 30px;
+    cursor: pointer;
+}
+

@@ -56,3 +56,35 @@ function normalizarTexto(texto) {
     .replace(/[\u0300-\u036f]/g, '')
     .trim();
 }
+
+
+function adicionarCarrinho(nome, preco) {
+
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    const produtoExistente = carrinho.find(
+        produto => produto.nome === nome
+    );
+
+    if (produtoExistente) {
+
+        produtoExistente.quantidade++;
+
+    } else {
+
+        carrinho.push({
+            nome: nome,
+            preco: preco,
+            quantidade: 1
+        });
+
+    }
+
+    localStorage.setItem(
+        "carrinho",
+        JSON.stringify(carrinho)
+    );
+
+    alert(nome + " foi adicionado ao carrinho!");
+
+}

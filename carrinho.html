@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incoffee - Continue sua compra</title>
+    <link rel="stylesheet" href="Css/carrinho.css">
+    <title>Meu Carrinho - InCoffe</title>
 </head>
 <body>
+    <header class="cabecalho">
+        <a href="cardapio.html" class="logo">
+            InCoffe
+        </a>
+        <a href="cardapio.html" class="voltar">
+            Continuar comprando
+        </a>
+    </header>
+
+    <main class="carrinho-container">
+        <h1>Meu Carrinho</h1>
+        <div id="lista-carrinho" class="lista-carrinho">
+            <!-- Os produtos serão inseridos pelo JavaScript -->
+        </div>
+
+        <div class="resumo">
+            <h2>Resumo da compra</h2>
+            <div class="linha">
+                <span>Subtotal</span>
+                <span id="subtotal">R$ 0,00</span>
+            </div>
+            <div class="linha">
+                <span>Entrega</span>
+                <span>Grátis</span>
+            </div>
+            <div class="linha total">
+                <span>Total</span>
+                <span id="total">R$ 0,00</span>
+            </div>
+            <button class="btn-pagar" onclick="mostrarPagamento()">
+                Finalizar pagamento
+            </button>
+        </div>
+
+        <div id="pagamento" class="pagamento">
+            <div class="pagamento-box">
+                <button class="fechar" onclick="fecharPagamento()">
+                    ×
+                </button>
+                <h2>Pagamento</h2>
+                <p>
+                    Escaneie o QR Code abaixo para realizar o pagamento.
+                </p>
+                <div class="qrcode">
+                    QR CODE
+                </div>
+                <span class="pix">
+                    PIX
+                </span>
+                <p class="aviso">
+                    Este é um QR Code fictício para demonstração.
+                </p>
+            </div>
+        </div>
+    </main>
+
     
+    <script src="carrinho.js"></script>
 </body>
 </html>
