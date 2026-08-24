@@ -133,7 +133,7 @@ button:focus-visible,
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #f7f2ea;
+  background: #f5f1ec;
   container-type: inline-size;
 }
 
@@ -163,7 +163,7 @@ button:focus-visible,
 .inicio-texto-linha {
   display: block;
   width: 100%;
-  color: rgba(139, 69, 19, 0.32);
+  color: rgba(126, 91, 72, 0.3);
   font-family: "Rockwell Extra Bold", Rockwell, "Cooper Black", Georgia, serif;
   font-size: clamp(4rem, 18cqi, 14rem);
   font-weight: 900;
@@ -175,11 +175,11 @@ button:focus-visible,
 }
 
 .inicio-texto-linha:nth-child(2) {
-  color: rgba(139, 69, 19, 0.26);
+  color: rgba(126, 91, 72, 0.24);
 }
 
 .inicio-texto-linha:nth-child(3) {
-  color: rgba(139, 69, 19, 0.12);
+  color: rgba(126, 91, 72, 0.11);
 }
 
 .inicio-produto {

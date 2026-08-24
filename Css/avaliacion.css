@@ -311,3 +311,265 @@ header {
         text-align: center;
     } 
 }
+
+/* Identidade visual da página de avaliações */
+:root {
+    --marrom: #873214;
+    --marrom-escuro: #6e2f08;
+    --rosa: #b05c6b;
+    --creme: #fffaf4;
+    --fundo-claro: #f8efe5;
+    --texto: #2c2c2a;
+    --texto-suave: #6f6258;
+    --caramelo: #d9b38c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--fundo-claro);
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    inset: 0 0 auto;
+    padding: 1.5rem 2rem;
+    background: var(--marrom);
+    box-shadow: 0 4px 18px rgba(63, 27, 12, 0.16);
+}
+
+#navbar {
+    max-width: 1240px;
+    height: 32px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#navbar::after {
+    display: none;
+}
+
+#ButtonNav {
+    height: 36px;
+    margin: 0;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 250, 244, 0.35);
+    border-radius: 6px;
+    background: transparent;
+    box-shadow: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.95rem;
+}
+
+#ButtonNav a,
+#nav_logo,
+.nav-item a {
+    color: var(--creme);
+}
+
+#nav_logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#nav_list {
+    gap: 2rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+}
+
+.nav-item a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover,
+.nav-item.active a {
+    color: #fff;
+}
+
+.nav-item.active a {
+    border-bottom-color: var(--caramelo);
+}
+
+#conteudo-principal {
+    min-height: 100vh;
+    padding: 10rem 1.5rem 5rem;
+    background: radial-gradient(circle at 85% 10%, rgba(217, 179, 140, 0.32), transparent 28%), var(--fundo-claro);
+}
+
+#formulario {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(320px, 1.2fr);
+    gap: clamp(2rem, 7vw, 7rem);
+    width: min(1080px, 100%);
+    margin: 0 auto;
+    padding: 0;
+}
+
+.cabecalho-avaliacoes {
+    align-self: start;
+    max-width: 360px;
+}
+
+.eyebrow {
+    color: var(--rosa);
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cabecalho-avaliacoes h1 {
+    margin: 0.75rem 0 1rem;
+    color: var(--marrom);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 0.98;
+}
+
+.cabecalho-avaliacoes p {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+}
+
+#formulario form {
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid rgba(135, 50, 20, 0.12);
+    border-radius: 8px;
+    background: var(--creme);
+    box-shadow: 0 18px 45px rgba(104, 54, 29, 0.12);
+    font-family: Arial, sans-serif;
+}
+
+#formulario form > label,
+.linha-testemunho label,
+legend {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--marrom-escuro);
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+#titulo,
+#testemunho {
+    width: 100%;
+    border: 1px solid rgba(135, 50, 20, 0.2);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--texto);
+    padding: 0.8rem;
+    font: inherit;
+}
+
+#titulo {
+    height: 44px;
+    margin-bottom: 1.5rem;
+}
+
+#testemunho {
+    min-height: 220px;
+    resize: vertical;
+}
+
+#titulo:focus,
+#testemunho:focus {
+    outline: 2px solid var(--rosa);
+    outline-offset: 2px;
+}
+
+.linha-testemunho {
+    margin-bottom: 0.5rem;
+}
+
+.comentarios-panel {
+    position: static;
+    display: block;
+    transform: none;
+}
+
+.comentario-aba {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--rosa);
+    box-shadow: none;
+    font-size: 0.78rem;
+    text-decoration: underline;
+}
+
+fieldset {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, sans-serif;
+}
+
+fieldset legend {
+    width: 100%;
+}
+
+fieldset input {
+    accent-color: var(--marrom);
+}
+
+fieldset label {
+    margin-right: 1rem;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+#enviar {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border: 0;
+    border-radius: 4px;
+    background: var(--marrom);
+    color: var(--creme);
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#enviar:hover {
+    background: var(--marrom-escuro);
+    color: var(--creme);
+    transform: translateY(-2px);
+}
+
+#comentariosPopout {
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    width: min(430px, calc(100vw - 3rem));
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 700px) {
+    #formulario {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cabecalho-avaliacoes {
+        max-width: none;
+    }
+
+    #conteudo-principal {
+        padding-top: 8rem;
+    }
+}
