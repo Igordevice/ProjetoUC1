@@ -21,11 +21,15 @@
                     <a href="index.html">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#menu">Cardápio</a>
+                    <a href="cardapio.html">Cardápio</a>
                 </li>
                 <li class="nav-item">
                     <a href="conheça.html">Conheça seu café</a>
                 </li>
+                <li class="nav-item">
+                    <a href="sobrenos.html">Sobre nós</a>
+                </li>
+                
             </ul>
 
             
@@ -35,23 +39,34 @@
             </button>
         </nav>
     </header>
-  <div id="formulario">
+    <main id="conteudo-principal">
+        <section id="formulario" aria-labelledby="titulo-avaliacoes">
+            <div class="cabecalho-avaliacoes">
+                <span class="eyebrow">Sua experiência</span>
+                <h1 id="titulo-avaliacoes">Compartilhe sua avaliação</h1>
+                <p>Conte como foi sua pausa na Incoffee e ajude outras pessoas a escolherem o próximo café.</p>
+            </div>
+
     <form action="#" method="get">
-        <label for="titulo">Escolha um titulo:</label><br><br>
-        <input type="titulo" id="titulo" name="titulo"><br><br>
+                <label for="titulo">Escolha um título</label>
+                <input type="text" id="titulo" name="titulo">
 
         <div class="linha-testemunho">
             <label for="testemunho">Escreva o seu testemunho:</label>
             <div class="comentarios-panel">
-                <button class="comentario-aba" type="button" popovertarget="comentariosPopout">Comentar</button>
+                <button class="comentario-aba" type="button" popovertarget="comentariosPopout">Comentários:</button>
             </div>
         </div>
 
-        <textarea id="testemunho" name="testemunho"> </textarea><br><br>
+        <textarea id="testemunho" name="testemunho"></textarea>
 
-        <br><br>
-    
-        
+        <fieldset>
+        <legend>Comentários na publicação</legend>
+        <input type="radio" id="ativado" name="comentarios" value="ativado">
+        <label for="ativado">Ativado</label>
+        <input type="radio" id="desativado" name="comentarios" value="desativado">
+        <label for="desativado">Desativado</label>
+        </fieldset>
         <input type="submit" value="Publicar" id="enviar" class="btn">
     </form>
 
@@ -83,7 +98,8 @@
             </div>
         </div>
     </div>
-</div>
+        </section>
+    </main>
 
 <script src="acessibilidade.js"></script>
 </body>

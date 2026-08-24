@@ -392,7 +392,7 @@ input:focus-visible,
   align-items: flex-start;
   overflow: visible;
   border-radius: 0 0 var(--raio) var(--raio);
-  background: linear-gradient(180deg, rgba(248, 239, 229, 0) 0%, #d7a58e 18%, #9b3f1b 62%, var(--marrom) 100%);
+  background: linear-gradient(180deg, rgba(248, 239, 229, 0) 0%, #d4ad9d 18%, #9d5540 62%, #824532 100%);
   color: #fff;
   box-shadow: 0 10px 25px rgba(83, 39, 22, 0.12);
 }
