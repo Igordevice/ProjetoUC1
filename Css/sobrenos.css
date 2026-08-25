@@ -3,13 +3,14 @@ body {
     background-color: #E5D7CA;
     color: #4b2e1e;
     padding-top: 80px;
+    overflow-x: hidden;
 }
 
 h2 {
     text-align: center;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, bold ;
-    font-size: 62px;
+    font-size: clamp(2.4rem, 7vw, 62px);
     margin-bottom: 35px;
     color: #6E2F08;
 }
@@ -24,7 +25,7 @@ h2 {
 
 
 .texto-sobre {
-    width: 75%;
+    width: min(75%, 1080px);
     margin: auto;
     background-color: white;
     padding: 45px;
@@ -50,18 +51,23 @@ h2 {
 }
 
 #carouselExampleAutoplaying {
-    width: 85%;
-    height: 450px;
+    width: min(85%, 1180px);
+    height: clamp(260px, 42vw, 450px);
     margin: 60px auto;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
+#carouselExampleAutoplaying .carousel-inner,
+#carouselExampleAutoplaying .carousel-item {
+    height: 100%;
+}
+
 
 #carouselExampleAutoplaying img {
     width: 100%;
-    height: 450px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -126,7 +132,7 @@ h2 {
 .graficos {
     display: block;
     margin: 50px auto;
-    width: 800px;
+    width: min(800px, 90%);
     height: auto;
     border-radius: 18px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
@@ -217,7 +223,7 @@ h2 {
     margin: auto;
 
     display: flex;
-    align-items: center, flex-start;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 50px;
 }
@@ -322,4 +328,131 @@ h2 {
     margin: 0;
     color: #d9c3b2;
     font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+    .texto-sobre,
+    .introducao-valores,
+    .textoabaixodasgrf,
+    .valores-container {
+        width: 86%;
+    }
+
+    .sustentabilidade {
+        flex-direction: column;
+        gap: 0;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .textoabaixodasfts {
+        width: 100%;
+    }
+
+    .valor {
+        width: calc(50% - 14px);
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 760px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .sobre,
+    .valores {
+        padding: 52px 0;
+    }
+
+    .texto-sobre,
+    .textoabaixodasgrf {
+        width: 90%;
+        padding: 28px;
+    }
+
+    .texto-sobre p,
+    .textoabaixodasfts,
+    .textoabaixodasgrf,
+    .valor p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    #carouselExampleAutoplaying {
+        width: 90%;
+        margin: 42px auto;
+        border-radius: 14px;
+    }
+
+    .introducao-valores {
+        width: 90%;
+        margin-bottom: 34px;
+        font-size: 18px;
+    }
+
+    .valores-container {
+        width: 90%;
+        margin: 36px auto;
+    }
+
+    .valor {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .footer {
+        padding: 40px 24px 18px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
+
+    .footer-logo h2 {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    .texto-sobre,
+    .textoabaixodasfts,
+    .textoabaixodasgrf,
+    .valor {
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    #carouselExampleAutoplaying {
+        height: 230px;
+    }
+
+    .sustentabilidade {
+        padding-bottom: 44px;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .graficos {
+        width: calc(100% - 32px);
+        margin: 32px auto;
+        border-radius: 12px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
 }
