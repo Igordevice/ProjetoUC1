@@ -63,3 +63,15 @@ function adicionarCarrinho(nome, preco) {
     alert(nome + " foi adicionado ao carrinho!");
 
 }
+
+ScrollReveal().reveal('.lista-comentarios', {
+        origin: 'left',
+        duration: 1000,
+        distance: '20%'
+})
+ScrollReveal().reveal('.cabecalho-imagem', {
+        origin: 'left',
+        duration: 1000,
+        distance: '20%'
+})
+   
