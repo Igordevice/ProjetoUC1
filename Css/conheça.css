@@ -525,8 +525,164 @@
   .cardapio {
     padding: 76px 0 68px;
   }
+
+  .produto {
+    flex-basis: 270px;
+    height: 418px;
+    padding-top: 218px;
   }
-  
+
+  .produto img {
+    top: -44px;
+    width: 218px;
+    height: 218px;
+  }
+
+  .localizacao {
+    padding: 76px 24px 78px;
+  }
+
+  .localizacao-conteudo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .sobre-conteudo,
+  .rodape-conteudo {
+    flex-direction: column;
+  }
+
+  .sobre-texto,
+  .sobre-video {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-texto {
+    min-height: 50vh;
+    padding: 46px 24px;
+  }
+
+  .sobre-video {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  #barra-navegacao {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #lista-navegacao {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 12px;
+  }
+
+  .inicio {
+    margin-top: 120px;
+  }
+
+  .inicio-texto-linha {
+    font-size: clamp(3.4rem, 20cqi, 8rem);
+  }
+
+  .inicio-produto {
+    top: 66%;
+    width: clamp(300px, 78vw, 460px);
+  }
+
+  .ingredientes {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .ingredientes-imagem {
+    min-height: 300px;
+  }
+
+  .ingredientes-conteudo {
+    padding: 46px 24px 54px;
+  }
+
+  .cardapio {
+    padding: 68px 0 60px;
+  }
+
+  .lista-produtos {
+    gap: 20px;
+    padding: 90px 22px 18px;
+  }
+
+  .produto {
+    flex: 0 0 min(76vw, 265px);
+    height: 404px;
+    padding: 204px 20px 24px;
+  }
+
+  .produto img {
+    top: -44px;
+    width: 204px;
+    height: 204px;
+  }
+
+  .produto:nth-child(2) img {
+    top: -34px;
+    width: 236px;
+    height: 184px;
+  }
+
+  .produto:nth-child(4) img,
+  .produto:nth-child(7) img {
+    top: -38px;
+    width: 216px;
+    height: 194px;
+  }
+
+  .produto p {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .botao-carrossel {
+    width: 40px;
+    height: 40px;
+    font-size: 1.55rem;
+  }
+
+  .botao-carrossel--anterior {
+    left: 8px;
+  }
+
+  .botao-carrossel--proximo {
+    right: 8px;
+  }
+
+  .localizacao {
+    padding: 64px 16px 68px;
+  }
+
+  .localizacao-cabecalho h2 {
+    font-size: 2.65rem;
+  }
+
+  .mapa-quadro {
+    height: 320px;
+  }
+
+  .mapa-legenda {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .rodape {
+    padding: 40px 24px 20px;
+  }
+}
 
   /* ================= RESPONSIVO ================= */
 
