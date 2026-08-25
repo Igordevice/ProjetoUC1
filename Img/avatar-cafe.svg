@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Avatar ilustrado com xicara de cafe">
+  <rect width="160" height="160" rx="80" fill="#f1ded1"/>
+  <circle cx="80" cy="80" r="64" fill="#fffaf4"/>
+  <path fill="#873214" d="M47 71h63v25a28 28 0 0 1-28 28h-7a28 28 0 0 1-28-28V71Z"/>
+  <path fill="none" stroke="#873214" stroke-width="10" stroke-linecap="round" d="M110 82h7a15 15 0 0 1 0 30h-9"/>
+  <path fill="none" stroke="#b05c6b" stroke-width="7" stroke-linecap="round" d="M61 49c-6 7 6 9 0 16M80 44c-7 8 7 10 0 18M99 49c-6 7 6 9 0 16"/>
+</svg>

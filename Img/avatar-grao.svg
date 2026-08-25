@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Avatar ilustrado com grao de cafe">
+  <rect width="160" height="160" rx="80" fill="#ead8c8"/>
+  <circle cx="80" cy="80" r="64" fill="#fffaf4"/>
+  <path fill="#873214" d="M105 36c22 22 26 58 8 76s-54 14-76-8c7-24 17-41 31-55s31-21 37-13Z"/>
+  <path fill="none" stroke="#f1ded1" stroke-width="9" stroke-linecap="round" d="M104 40C86 59 69 79 42 105"/>
+  <circle cx="113" cy="112" r="12" fill="#b05c6b"/>
+  <circle cx="48" cy="48" r="9" fill="#d9b38c"/>
+</svg>

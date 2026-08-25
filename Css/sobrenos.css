@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     background-color: #E5D7CA;
     color: #4b2e1e;
     padding-top: 80px;
@@ -8,9 +8,10 @@ body {
 
 h2 {
     text-align: center;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, bold ;
+    font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
     font-size: clamp(2.4rem, 7vw, 62px);
+    font-weight: 900;
+    line-height: 0.95;
     margin-bottom: 35px;
     color: #6E2F08;
 }
@@ -41,7 +42,6 @@ h2 {
     font-size: 19px;
     line-height: 1.8;
     color: #4b2e1e;
-    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 20px;
 }
 
@@ -90,7 +90,6 @@ h2 {
     font-size: 19px;
     line-height: 1.8;
     color: #4b2e1e;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #f8f4ef;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
@@ -125,7 +124,6 @@ h2 {
     font-size: 21px;
     line-height: 1.7;
     color: #6E2F08;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
@@ -154,7 +152,6 @@ h2 {
     font-size: 19px;
     line-height: 1.8;
     color: #4b2e1e;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
@@ -190,15 +187,16 @@ h2 {
 
 .valor h3 {
     color: #6E2F08;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
     font-size: 23px;
+    font-weight: 900;
+    line-height: 1.1;
     margin-bottom: 15px;
     text-align: center;
 }
 
 
 .valor p {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     line-height: 1.7;
     color: #4b2e1e;
@@ -215,7 +213,6 @@ h2 {
     background-color:  #8f3616;
     color: white;
     padding: 50px 60px 20px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-container {
@@ -235,8 +232,9 @@ h2 {
 
 .footer-logo h2 {
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, bold;
+    font-family: "Rockwell Extra Bold", Rockwell, Georgia, serif;
     font-size: 32px;
+    font-weight: 900;
     margin:  10px;
 }
 
